@@ -31,10 +31,10 @@ Getting Clog4j integrated into your project is easy. Add the following to your p
 
 ```java
 if(isDebug) { // <-- isDebug is a flag indicating your build is in development, replace with your actual debug check
-    Clog.addProfile("dev", Clog4j.getDevelopmentClog());
+    Clog.setCurrentProfile("dev", Clog4j.getDevelopmentClog());
 }
 else {
-    Clog.addProfile("prod", Clog4j.getProductionClog());
+    Clog.setCurrentProfile("prod", Clog4j.getProductionClog());
 }
 ```
 
