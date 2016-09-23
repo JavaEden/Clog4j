@@ -62,7 +62,7 @@ In your module's `build.gradle` (replace the version with the most recent releas
 ```groovy
 dependencies {
     ...
-    compile('com.github.cjbrooks12:Clog4j:6eeb92115c') {
+    compile('com.github.cjbrooks12:Clog4j:v0.1.0') {
         transitive = true;
     }
 }
