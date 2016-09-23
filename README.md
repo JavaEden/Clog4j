@@ -27,7 +27,7 @@ d(String tag, String message) {
 }
 ```
 
-Getting Clog4j integrated into your project is easy. Add the following to your project's initialization, such as Spring Boot's `main()` method:
+Getting Clog4j integrated into your project is easy. Add the following to your project's initialization, such as your `main()` method:
 
 ```java
 if(isDebug) { // <-- isDebug is a flag indicating your build is in development, replace with your actual debug check
