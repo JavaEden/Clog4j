@@ -9,6 +9,10 @@ public class ClogTrace implements ClogLogger {
 
     private static final Logger logger = LogManager.getLogger(ClogTrace.class);
 
+    public boolean isActive() {
+        return true;
+    }
+
     public int log(String tag, String message) {
         logger.trace(MarkerManager.getMarker(tag), message);
         return 0;

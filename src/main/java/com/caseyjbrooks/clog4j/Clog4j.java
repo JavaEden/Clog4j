@@ -3,6 +3,7 @@ package com.caseyjbrooks.clog4j;
 import com.caseyjbrooks.clog.Clog;
 import com.caseyjbrooks.clog.ClogFormatter;
 import com.caseyjbrooks.clog.ClogLogger;
+import com.caseyjbrooks.clog.EmptyLogger;
 import com.caseyjbrooks.clog.parseltongue.Parseltongue;
 
 import java.util.HashMap;
@@ -26,13 +27,13 @@ public class Clog4j {
     public static Clog getProductionClog() {
         ClogFormatter formatter = new Parseltongue();
         HashMap<String, ClogLogger> loggers = new HashMap<String, ClogLogger>();
-        loggers.put(null, new EmptyClog4j());
-        loggers.put("d", new EmptyClog4j());
-        loggers.put("e", new EmptyClog4j());
-        loggers.put("i", new EmptyClog4j());
-        loggers.put("v", new EmptyClog4j());
-        loggers.put("w", new EmptyClog4j());
-        loggers.put("wtf", new EmptyClog4j());
+        loggers.put(null, new EmptyLogger());
+        loggers.put("d", new EmptyLogger());
+        loggers.put("e", new EmptyLogger());
+        loggers.put("i", new EmptyLogger());
+        loggers.put("v", new EmptyLogger());
+        loggers.put("w", new EmptyLogger());
+        loggers.put("wtf", new EmptyLogger());
 
         return new Clog(loggers, formatter);
     }

@@ -9,6 +9,10 @@ public class ClogDebug implements ClogLogger {
 
     private static final Logger logger = LogManager.getLogger(ClogDebug.class);
 
+    public boolean isActive() {
+        return true;
+    }
+
     public int log(String tag, String message) {
         logger.debug(MarkerManager.getMarker(tag), message);
         return 0;

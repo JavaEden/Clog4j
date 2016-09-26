@@ -9,6 +9,10 @@ public class ClogFatal implements ClogLogger {
 
     private static final Logger logger = LogManager.getLogger(ClogFatal.class);
 
+    public boolean isActive() {
+        return true;
+    }
+
     public int log(String tag, String message) {
         logger.fatal(MarkerManager.getMarker(tag), message);
         return 0;

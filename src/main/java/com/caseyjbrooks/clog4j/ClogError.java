@@ -9,6 +9,10 @@ public class ClogError implements ClogLogger {
 
     private static final Logger logger = LogManager.getLogger(ClogError.class);
 
+    public boolean isActive() {
+        return true;
+    }
+
     public int log(String tag, String message) {
         logger.error(MarkerManager.getMarker(tag), message);
         return 0;
