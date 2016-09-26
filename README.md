@@ -67,3 +67,22 @@ dependencies {
     }
 }
 ```
+
+You will need to add a Log4j configuration file to your project for any logging of priotity lower than `error` to show. Add a file called `log4j2.xml` to `src/main/resources/` as your configuration file. A basic example configuration is shown below:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <Console name="STDOUT" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d %-5p [%t] %C{2} (%F:%L) - %m%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="org.apache.log4j.xml" level="info"/>
+        <Root level="debug">
+            <AppenderRef ref="STDOUT"/>
+        </Root>
+    </Loggers>
+</Configuration>
+```
