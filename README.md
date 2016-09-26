@@ -80,7 +80,7 @@ You will need to add a Log4j configuration file to your project for any logging 
     </Appenders>
     <Loggers>
         <Logger name="org.apache.log4j.xml" level="info"/>
-        <Root level="debug">
+        <Root level="trace">
             <AppenderRef ref="STDOUT"/>
         </Root>
     </Loggers>
