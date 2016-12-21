@@ -9,17 +9,25 @@ public class ClogFatal implements ClogLogger {
 
     private static final Logger logger = LogManager.getLogger(ClogFatal.class);
 
+    @Override
     public boolean isActive() {
         return true;
     }
 
+    @Override
     public int log(String tag, String message) {
         logger.fatal(MarkerManager.getMarker(tag), message);
         return 0;
     }
 
+    @Override
     public int log(String tag, String message, Throwable throwable) {
         logger.fatal(MarkerManager.getMarker(tag), message, throwable);
         return 0;
+    }
+
+    @Override
+    public int priority() {
+        return 6;
     }
 }

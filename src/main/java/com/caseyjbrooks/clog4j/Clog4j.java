@@ -12,28 +12,28 @@ public class Clog4j {
 
     public static Clog getDevelopmentClog() {
         ClogFormatter formatter = new Parseltongue();
-        HashMap<String, ClogLogger> loggers = new HashMap<String, ClogLogger>();
+        HashMap<String, ClogLogger> loggers = new HashMap<>();
         loggers.put(null, new ClogInfo());
-        loggers.put("d", new ClogDebug());
-        loggers.put("e", new ClogError());
-        loggers.put("i", new ClogInfo());
-        loggers.put("v", new ClogTrace());
-        loggers.put("w", new ClogWarn());
-        loggers.put("wtf", new ClogFatal());
+        loggers.put(Clog.KEY_V,   new ClogTrace());
+        loggers.put(Clog.KEY_D,   new ClogDebug());
+        loggers.put(Clog.KEY_I,   new ClogInfo());
+        loggers.put(Clog.KEY_W,   new ClogWarn());
+        loggers.put(Clog.KEY_E,   new ClogError());
+        loggers.put(Clog.KEY_WTF, new ClogFatal());
 
         return new Clog(loggers, formatter);
     }
 
     public static Clog getProductionClog() {
         ClogFormatter formatter = new Parseltongue();
-        HashMap<String, ClogLogger> loggers = new HashMap<String, ClogLogger>();
+        HashMap<String, ClogLogger> loggers = new HashMap<>();
         loggers.put(null, new EmptyLogger());
-        loggers.put("d", new EmptyLogger());
-        loggers.put("e", new EmptyLogger());
-        loggers.put("i", new EmptyLogger());
-        loggers.put("v", new EmptyLogger());
-        loggers.put("w", new EmptyLogger());
-        loggers.put("wtf", new EmptyLogger());
+        loggers.put(Clog.KEY_V,   new EmptyLogger());
+        loggers.put(Clog.KEY_D,   new EmptyLogger());
+        loggers.put(Clog.KEY_I,   new EmptyLogger());
+        loggers.put(Clog.KEY_W,   new EmptyLogger());
+        loggers.put(Clog.KEY_E,   new EmptyLogger());
+        loggers.put(Clog.KEY_WTF, new EmptyLogger());
 
         return new Clog(loggers, formatter);
     }
