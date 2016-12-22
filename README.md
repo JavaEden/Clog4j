@@ -1,7 +1,7 @@
 # Clog4j
 Clog logger implementation for Log4j
 
-See https://github.com/cjbrooks12/Clog for information on Clog.
+See https://github.com/JavaEden/Clog for information on Clog.
 
 ### Clog4j Implementation
 
@@ -43,9 +43,9 @@ In development, all logs will be directed to the Log4j implementations shown abo
 ### Download
 Clog and Clog4j is distrubuted through JitPack.io.
 
-[![](https://jitpack.io/v/cjbrooks12/Clog4j.svg)](https://jitpack.io/#cjbrooks12/Clog4j)
-[![JitPack Javadoc](https://img.shields.io/github/tag/cjbrooks12/Clog.svg?maxAge=2592000&label=javadoc)](https://jitpack.io/com/github/cjbrooks12/Clog/v1.0.0/javadoc/)
-[![Github Releases](https://img.shields.io/github/downloads/cjbrooks12/Clog4j/latest/total.svg?maxAge=2592000)]()
+[![](https://jitpack.io/v/JavaEden/Clog4j.svg)](https://jitpack.io/#JavaEden/Clog4j)
+[![JitPack Javadoc](https://img.shields.io/github/tag/JavaEden/Clog.svg?maxAge=2592000&label=javadoc)](https://jitpack.io/com/github/JavaEden/Clog/v1.2.4/javadoc/)
+[![Github Releases](https://img.shields.io/github/downloads/JavaEden/Clog4j/latest/total.svg?maxAge=2592000)]()
 
 In your project-level `build.gradle`:
 
@@ -62,7 +62,7 @@ In your module's `build.gradle` (replace the version with the most recent releas
 ```groovy
 dependencies {
     ...
-    compile('com.github.cjbrooks12:Clog4j:v1.0.0') {
+    compile('com.github.JavaEden:Clog4j:v1.2.4') {
         transitive = true;
     }
 }
