@@ -1,0 +1,89 @@
+[
+  {
+    "simpleName": "Clog4j",
+    "superclass": {
+      "simpleName": "Object",
+      "name": "java.lang.Object"
+    },
+    "name": "com.caseyjbrooks.clog4j.Clog4j",
+    "url": "https://javaeden.github.io/Clog4j/classes/com/caseyjbrooks/clog4j/Clog4j"
+  },
+  {
+    "interfaces": [{
+      "simpleName": "ClogLogger",
+      "name": "com.caseyjbrooks.clog.ClogLogger"
+    }],
+    "simpleName": "ClogDebug",
+    "superclass": {
+      "simpleName": "Object",
+      "name": "java.lang.Object"
+    },
+    "name": "com.caseyjbrooks.clog4j.ClogDebug",
+    "url": "https://javaeden.github.io/Clog4j/classes/com/caseyjbrooks/clog4j/ClogDebug"
+  },
+  {
+    "interfaces": [{
+      "simpleName": "ClogLogger",
+      "name": "com.caseyjbrooks.clog.ClogLogger"
+    }],
+    "simpleName": "ClogError",
+    "superclass": {
+      "simpleName": "Object",
+      "name": "java.lang.Object"
+    },
+    "name": "com.caseyjbrooks.clog4j.ClogError",
+    "url": "https://javaeden.github.io/Clog4j/classes/com/caseyjbrooks/clog4j/ClogError"
+  },
+  {
+    "interfaces": [{
+      "simpleName": "ClogLogger",
+      "name": "com.caseyjbrooks.clog.ClogLogger"
+    }],
+    "simpleName": "ClogFatal",
+    "superclass": {
+      "simpleName": "Object",
+      "name": "java.lang.Object"
+    },
+    "name": "com.caseyjbrooks.clog4j.ClogFatal",
+    "url": "https://javaeden.github.io/Clog4j/classes/com/caseyjbrooks/clog4j/ClogFatal"
+  },
+  {
+    "interfaces": [{
+      "simpleName": "ClogLogger",
+      "name": "com.caseyjbrooks.clog.ClogLogger"
+    }],
+    "simpleName": "ClogInfo",
+    "superclass": {
+      "simpleName": "Object",
+      "name": "java.lang.Object"
+    },
+    "name": "com.caseyjbrooks.clog4j.ClogInfo",
+    "url": "https://javaeden.github.io/Clog4j/classes/com/caseyjbrooks/clog4j/ClogInfo"
+  },
+  {
+    "interfaces": [{
+      "simpleName": "ClogLogger",
+      "name": "com.caseyjbrooks.clog.ClogLogger"
+    }],
+    "simpleName": "ClogTrace",
+    "superclass": {
+      "simpleName": "Object",
+      "name": "java.lang.Object"
+    },
+    "name": "com.caseyjbrooks.clog4j.ClogTrace",
+    "url": "https://javaeden.github.io/Clog4j/classes/com/caseyjbrooks/clog4j/ClogTrace"
+  },
+  {
+    "interfaces": [{
+      "simpleName": "ClogLogger",
+      "name": "com.caseyjbrooks.clog.ClogLogger"
+    }],
+    "simpleName": "ClogWarn",
+    "superclass": {
+      "simpleName": "Object",
+      "name": "java.lang.Object"
+    },
+    "name": "com.caseyjbrooks.clog4j.ClogWarn",
+    "url": "https://javaeden.github.io/Clog4j/classes/com/caseyjbrooks/clog4j/ClogWarn"
+  }
+]

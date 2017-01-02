@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="index, follow">
+
+<!-- start:inject SEO data -->
+
+<title>ClogTrace</title>
+<script>window.title = 'ClogTrace';</script>
+
+
+
+<title>The power of Log4j wrapped inside the simplicity of logging and String formatting of Clog</title>
+
+
+
+
+
+<link rel="prev" href="https://javaeden.github.io/Clog4j/classes/com/caseyjbrooks/clog4j/ClogInfo">
+
+
+
+<link rel="next" href="https://javaeden.github.io/Clog4j/classes/com/caseyjbrooks/clog4j/ClogWarn">
+
+
+
+<!-- end:inject SEO data -->
+
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.ie.min.css" />
+<![endif]-->
+
+
+<link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.min.css" rel="stylesheet" />
+
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.3.0/bootbox.min.js"></script>
+
+
+<!-- start:inject styles -->
+
+
+    
+    <link rel="stylesheet" type="text/css" href="https://javaeden.github.io/Clog4j/assets/css/bootstrap_theme.css" />
+    
+    <link rel="stylesheet" type="text/css" href="https://javaeden.github.io/Clog4j/assets/css/docs.css" />
+    
+    <link rel="stylesheet" type="text/css" href="https://javaeden.github.io/Clog4j/assets/css/orchid.css" />
+    
+    <link rel="stylesheet" type="text/css" href="https://javaeden.github.io/Clog4j/assets/css/inner/dir/innerdir.css" />
+    
+    <link rel="stylesheet" type="text/css" href="https://javaeden.github.io/Clog4j/assets/css/inner/dir/orchidinnerdir.css" />
+    
+
+<!-- end:inject styles -->
+</head>
+<body>
+
+<a class="github-fork-ribbon left-top" href="https://github.com/JavaEden/Clog4j" title="Fork me on GitHub">Fork me on GitHub</a>
+
+<header class="navbar navbar-fixed-top bs-docs-nav" id="top">
+    <div class="container">
+        <div class="navbar-header" role="banner">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://javaeden.github.io/Clog4j/">Orchid</a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+
+            
+
+            <ul class="nav navbar-nav">
+                
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                
+                    
+                        
+
+
+
+
+
+
+
+
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">All Pages <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+        
+        
+            
+            <li><a href="https://javaeden.github.io/Clog4j/pages/download">Download</a></li>
+            
+            <li><a href="https://javaeden.github.io/Clog4j/pages/logging">Logging</a></li>
+            
+            <li><a href="https://javaeden.github.io/Clog4j/pages/overview">Overview</a></li>
+            
+            <li><a href="https://javaeden.github.io/Clog4j/pages/parseltongue">Parseltongue</a></li>
+            
+        
+    </ul>
+</li>
+
+
+
+                    
+                        
+
+
+
+
+
+
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">All Classes <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+        
+        
+        <li><a href="https://javaeden.github.io/Clog4j/classes/com/caseyjbrooks/clog4j/Clog4j">Clog4j</a></li>
+        
+        <li><a href="https://javaeden.github.io/Clog4j/classes/com/caseyjbrooks/clog4j/ClogDebug">ClogDebug</a></li>
+        
+        <li><a href="https://javaeden.github.io/Clog4j/classes/com/caseyjbrooks/clog4j/ClogError">ClogError</a></li>
+        
+        <li><a href="https://javaeden.github.io/Clog4j/classes/com/caseyjbrooks/clog4j/ClogFatal">ClogFatal</a></li>
+        
+        <li><a href="https://javaeden.github.io/Clog4j/classes/com/caseyjbrooks/clog4j/ClogInfo">ClogInfo</a></li>
+        
+        <li><a href="https://javaeden.github.io/Clog4j/classes/com/caseyjbrooks/clog4j/ClogTrace">ClogTrace</a></li>
+        
+        <li><a href="https://javaeden.github.io/Clog4j/classes/com/caseyjbrooks/clog4j/ClogWarn">ClogWarn</a></li>
+        
+    </ul>
+</li>
+
+
+
+
+
+                    
+                        
+
+
+
+
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">All Packages <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+        
+        <li><a href="https://javaeden.github.io/Clog4j/classes/com/caseyjbrooks/clog4j">com.caseyjbrooks.clog4j</a></li>
+        
+    </ul>
+</li>
+
+
+
+
+
+
+
+                    
+                
+            </ul>
+
+            
+        </nav>
+    </div>
+</header>
+
+
+
+<div class="bs-docs-masthead" id="jumbotron">
+    <div class="container">
+        <h1 class="home-title">ClogTrace</h1>
+        <p class="lead">com.caseyjbrooks.clog4j.ClogTrace</p>
+    </div>
+</div>
+
+<div class="container bs-docs-container">
+    <div class="row">
+        <div class="col-md-9" role="main">
+            <section class="bs-docs-section">
+                <h1 id="class-info" class="page-header">Class Info</h1>
+
+                <span>
+                    public
+                    class
+                    
+                    <a href="https://javaeden.github.io/Clog4j/classes/com/caseyjbrooks/clog4j/ClogTrace" data-toggle="tooltip" title="com.caseyjbrooks.clog4j.ClogTrace">ClogTrace</a>
+
+<!-- if the type is a wildcard, display its extends/super types -->
+
+
+
+
+<!-- if the type is a parameterized type, display its type parameters inside brackets -->
+
+                </span>
+
+                
+                <span>
+                    extends
+                    
+                    <code data-toggle="tooltip" title="java.lang.Object">Object</code>
+
+<!-- if the type is a wildcard, display its extends/super types -->
+
+
+
+
+<!-- if the type is a parameterized type, display its type parameters inside brackets -->
+
+                </span>
+                
+
+                <br>
+                <br>
+
+                <span>
+                    in package <code>com.caseyjbrooks.clog4j</code>
+                </span>
+
+                <br>
+                <br>
+
+                
+                    <b>No Known Direct Subclasses</b>
+                
+
+                <br>
+                <br>
+                <br>
+
+                
+
+            </section>
+
+            <section class="bs-docs-section">
+                <h1 id="class-summary" class="page-header">Summary</h1>
+
+                <h3 id="summary-fields">Fields</h3>
+                
+                <p>No declared fields</p>
+                
+
+                <h3 id="summary-ctors">Constructors</h3>
+                
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Constructor and Description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    
+                    <tr id="ctor-1-summary">
+    <td>
+        <span class="modifiers">public</span>
+        <span class="type"><code data-toggle="tooltip" title="ClogTrace"></code>
+
+<!-- if the type is a wildcard, display its extends/super types -->
+
+
+
+
+<!-- if the type is a parameterized type, display its type parameters inside brackets -->
+</span>
+        <a href="#ctor-1-full">ClogTrace</a>(
+        
+        )
+        <br>
+        <span></span>
+    </td>
+</tr>
+                    
+                    </tbody>
+                </table>
+                
+
+                <h3 id="summary-methods">Methods</h3>
+                
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Modifier and Type</th>
+                        <th>Method and Description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    
+                    <tr id="method-1-isActive-summary">
+    <td>
+        <span class="modifiers">public</span>
+        <span class="type"><code data-toggle="tooltip" title="boolean">boolean</code>
+
+<!-- if the type is a wildcard, display its extends/super types -->
+
+
+
+
+<!-- if the type is a parameterized type, display its type parameters inside brackets -->
+</span>
+    </td>
+    <td>
+        <a href="#method-1-isActive-full">isActive</a>(
+        
+        )
+        <br>
+        <span></span>
+    </td>
+</tr>
+                    
+                    <tr id="method-2-log-summary">
+    <td>
+        <span class="modifiers">public</span>
+        <span class="type"><code data-toggle="tooltip" title="int">int</code>
+
+<!-- if the type is a wildcard, display its extends/super types -->
+
+
+
+
+<!-- if the type is a parameterized type, display its type parameters inside brackets -->
+</span>
+    </td>
+    <td>
+        <a href="#method-2-log-full">log</a>(
+        
+            
+            <code data-toggle="tooltip" title="java.lang.String">String</code>
+
+<!-- if the type is a wildcard, display its extends/super types -->
+
+
+
+
+<!-- if the type is a parameterized type, display its type parameters inside brackets -->
+
+            tag
+            
+                ,
+            
+            
+            
+            <code data-toggle="tooltip" title="java.lang.String">String</code>
+
+<!-- if the type is a wildcard, display its extends/super types -->
+
+
+
+
+<!-- if the type is a parameterized type, display its type parameters inside brackets -->
+
+            message
+            
+            
+        )
+        <br>
+        <span></span>
+    </td>
+</tr>
+                    
+                    <tr id="method-3-log-summary">
+    <td>
+        <span class="modifiers">public</span>
+        <span class="type"><code data-toggle="tooltip" title="int">int</code>
+
+<!-- if the type is a wildcard, display its extends/super types -->
+
+
+
+
+<!-- if the type is a parameterized type, display its type parameters inside brackets -->
+</span>
+    </td>
+    <td>
+        <a href="#method-3-log-full">log</a>(
+        
+            
+            <code data-toggle="tooltip" title="java.lang.String">String</code>
+
+<!-- if the type is a wildcard, display its extends/super types -->
+
+
+
+
+<!-- if the type is a parameterized type, display its type parameters inside brackets -->
+
+            tag
+            
+                ,
+            
+            
+            
+            <code data-toggle="tooltip" title="java.lang.String">String</code>
+
+<!-- if the type is a wildcard, display its extends/super types -->
+
+
+
+
+<!-- if the type is a parameterized type, display its type parameters inside brackets -->
+
+            message
+            
+                ,
+            
+            
+            
+            <code data-toggle="tooltip" title="java.lang.Throwable">Throwable</code>
+
+<!-- if the type is a wildcard, display its extends/super types -->
+
+
+
+
+<!-- if the type is a parameterized type, display its type parameters inside brackets -->
+
+            throwable
+            
+            
+        )
+        <br>
+        <span></span>
+    </td>
+</tr>
+                    
+                    <tr id="method-4-priority-summary">
+    <td>
+        <span class="modifiers">public</span>
+        <span class="type"><code data-toggle="tooltip" title="int">int</code>
+
+<!-- if the type is a wildcard, display its extends/super types -->
+
+
+
+
+<!-- if the type is a parameterized type, display its type parameters inside brackets -->
+</span>
+    </td>
+    <td>
+        <a href="#method-4-priority-full">priority</a>(
+        
+        )
+        <br>
+        <span></span>
+    </td>
+</tr>
+                    
+                    </tbody>
+                </table>
+                
+            </section>
+
+            <section class="bs-docs-section">
+                <h1 id="class-fields" class="page-header">Fields</h1>
+                
+                    <p>No declared fields</p>
+                
+            </section>
+
+            <section class="bs-docs-section">
+                <h1 id="class-ctors" class="page-header">Constructors</h1>
+                
+                    
+                    
+<div class="panel panel-default" id="ctor-1-full" data-name="ClogTrace">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            <span class="modifiers">public</span>
+            <span class="type"><code data-toggle="tooltip" title="ClogTrace"></code>
+
+<!-- if the type is a wildcard, display its extends/super types -->
+
+
+
+
+<!-- if the type is a parameterized type, display its type parameters inside brackets -->
+</span>
+            <span>ClogTrace</span>(
+            )
+        </h3>
+    </div>
+    <div class="panel-body">
+        
+        <br>
+        <br>
+
+        
+        <h4>No Parameters</h4>
+        
+    </div>
+    
+</div>
+                    
+                
+            </section>
+
+            <section class="bs-docs-section">
+                <h1 id="class-methods" class="page-header">Methods</h1>
+                
+                    
+                    
+<div class="panel panel-default" id="method-1-isActive-full" data-name="isActive">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            <span class="modifiers">public</span>
+            <span class="type"><code data-toggle="tooltip" title="boolean">boolean</code>
+
+<!-- if the type is a wildcard, display its extends/super types -->
+
+
+
+
+<!-- if the type is a parameterized type, display its type parameters inside brackets -->
+</span>
+            <span>isActive(
+                )
+            </span>
+        </h3>
+    </div>
+    <div class="panel-body">
+        
+        <br>
+        <br>
+
+        
+        <h4>No Parameters</h4>
+        
+    </div>
+    
+
+    <div class="panel-body">
+        <h4>Returns: </h4>
+
+        
+        
+
+        
+    </div>
+</div>
+                    
+                    
+<div class="panel panel-default" id="method-2-log-full" data-name="log">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            <span class="modifiers">public</span>
+            <span class="type"><code data-toggle="tooltip" title="int">int</code>
+
+<!-- if the type is a wildcard, display its extends/super types -->
+
+
+
+
+<!-- if the type is a parameterized type, display its type parameters inside brackets -->
+</span>
+            <span>log(
+                
+                
+                <code data-toggle="tooltip" title="java.lang.String">String</code>
+
+<!-- if the type is a wildcard, display its extends/super types -->
+
+
+
+
+<!-- if the type is a parameterized type, display its type parameters inside brackets -->
+
+                tag
+                
+                ,
+                
+                
+                
+                <code data-toggle="tooltip" title="java.lang.String">String</code>
+
+<!-- if the type is a wildcard, display its extends/super types -->
+
+
+
+
+<!-- if the type is a parameterized type, display its type parameters inside brackets -->
+
+                message
+                
+                )
+            </span>
+        </h3>
+    </div>
+    <div class="panel-body">
+        
+        <br>
+        <br>
+
+        
+        <h4>Parameters:</h4>
+        
+    </div>
+    
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Type</th>
+            <th>Variable Name</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        
+        <tr>
+            <td>
+                
+                <code data-toggle="tooltip" title="java.lang.String">String</code>
+
+<!-- if the type is a wildcard, display its extends/super types -->
+
+
+
+
+<!-- if the type is a parameterized type, display its type parameters inside brackets -->
+
+            </td>
+            <td>
+                tag
+            </td>
+            <td>
+                
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                
+                <code data-toggle="tooltip" title="java.lang.String">String</code>
+
+<!-- if the type is a wildcard, display its extends/super types -->
+
+
+
+
+<!-- if the type is a parameterized type, display its type parameters inside brackets -->
+
+            </td>
+            <td>
+                message
+            </td>
+            <td>
+                
+            </td>
+        </tr>
+        
+
+        </tbody>
+    </table>
+    
+
+    <div class="panel-body">
+        <h4>Returns: </h4>
+
+        
+        
+
+        
+    </div>
+</div>
+                    
+                    
+<div class="panel panel-default" id="method-3-log-full" data-name="log">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            <span class="modifiers">public</span>
+            <span class="type"><code data-toggle="tooltip" title="int">int</code>
+
+<!-- if the type is a wildcard, display its extends/super types -->
+
+
+
+
+<!-- if the type is a parameterized type, display its type parameters inside brackets -->
+</span>
+            <span>log(
+                
+                
+                <code data-toggle="tooltip" title="java.lang.String">String</code>
+
+<!-- if the type is a wildcard, display its extends/super types -->
+
+
+
+
+<!-- if the type is a parameterized type, display its type parameters inside brackets -->
+
+                tag
+                
+                ,
+                
+                
+                
+                <code data-toggle="tooltip" title="java.lang.String">String</code>
+
+<!-- if the type is a wildcard, display its extends/super types -->
+
+
+
+
+<!-- if the type is a parameterized type, display its type parameters inside brackets -->
+
+                message
+                
+                ,
+                
+                
+                
+                <code data-toggle="tooltip" title="java.lang.Throwable">Throwable</code>
+
+<!-- if the type is a wildcard, display its extends/super types -->
+
+
+
+
+<!-- if the type is a parameterized type, display its type parameters inside brackets -->
+
+                throwable
+                
+                )
+            </span>
+        </h3>
+    </div>
+    <div class="panel-body">
+        
+        <br>
+        <br>
+
+        
+        <h4>Parameters:</h4>
+        
+    </div>
+    
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Type</th>
+            <th>Variable Name</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        
+        <tr>
+            <td>
+                
+                <code data-toggle="tooltip" title="java.lang.String">String</code>
+
+<!-- if the type is a wildcard, display its extends/super types -->
+
+
+
+
+<!-- if the type is a parameterized type, display its type parameters inside brackets -->
+
+            </td>
+            <td>
+                tag
+            </td>
+            <td>
+                
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                
+                <code data-toggle="tooltip" title="java.lang.String">String</code>
+
+<!-- if the type is a wildcard, display its extends/super types -->
+
+
+
+
+<!-- if the type is a parameterized type, display its type parameters inside brackets -->
+
+            </td>
+            <td>
+                message
+            </td>
+            <td>
+                
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                
+                <code data-toggle="tooltip" title="java.lang.Throwable">Throwable</code>
+
+<!-- if the type is a wildcard, display its extends/super types -->
+
+
+
+
+<!-- if the type is a parameterized type, display its type parameters inside brackets -->
+
+            </td>
+            <td>
+                throwable
+            </td>
+            <td>
+                
+            </td>
+        </tr>
+        
+
+        </tbody>
+    </table>
+    
+
+    <div class="panel-body">
+        <h4>Returns: </h4>
+
+        
+        
+
+        
+    </div>
+</div>
+                    
+                    
+<div class="panel panel-default" id="method-4-priority-full" data-name="priority">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            <span class="modifiers">public</span>
+            <span class="type"><code data-toggle="tooltip" title="int">int</code>
+
+<!-- if the type is a wildcard, display its extends/super types -->
+
+
+
+
+<!-- if the type is a parameterized type, display its type parameters inside brackets -->
+</span>
+            <span>priority(
+                )
+            </span>
+        </h3>
+    </div>
+    <div class="panel-body">
+        
+        <br>
+        <br>
+
+        
+        <h4>No Parameters</h4>
+        
+    </div>
+    
+
+    <div class="panel-body">
+        <h4>Returns: </h4>
+
+        
+        
+
+        
+    </div>
+</div>
+                    
+                
+            </section>
+        </div>
+
+        <!-- Page navigation
+        =========================================== -->
+        <div class="col-md-3" role="complementary">
+            <div class="bs-docs-sidebar hidden-print">
+                <ul class="nav bs-docs-sidenav">
+                </ul>
+                <a class="back-to-top" href="#top">
+                    <i class="glyphicon glyphicon-chevron-up"></i> Back to top
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer class="bs-docs-footer" role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <nav aria-label="navigateClasses">
+                    <ul class="pager">
+                        
+                        <li class="previous"><a href="https://javaeden.github.io/Clog4j/classes/com/caseyjbrooks/clog4j/ClogInfo"><span aria-hidden="true">&larr;</span> ClogInfo</a></li>
+                        
+
+                        
+                        <li class="next"><a href="https://javaeden.github.io/Clog4j/classes/com/caseyjbrooks/clog4j/ClogWarn">ClogWarn <span aria-hidden="true">&rarr;</span></a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <br>
+
+        <p>
+            Licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>,
+            documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
+        </p>
+        <p>
+            Documentation template based on the <a href="https://github.com/mistic100/jekyll-bootstrap-doc">Jekyll Bootstrap Doc</a> Jekyll theme by the <a href="http://getbootstrap.com">Bootstrap team</a>
+        </p>
+
+        <ul class="bs-docs-footer-links muted">
+            <li>Currently v1.3.0</li>
+        </ul>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.1.2/trianglify.min.js"></script>
+
+<!-- inject scripts -->
+
+
+    
+    <script src="https://javaeden.github.io/Clog4j/assets/js/docs.js"></script>
+    
+
+<script>window.root = {
+  "options": {
+    "baseUrl": "https://javaeden.github.io/Clog4j",
+    "d": "/Users/cbrooks/Documents/personal/java/eden/Clog4j/build/docs/javadoc",
+    "data": {
+      "additionalClasses": {"links": ["https://javaeden.github.io/Clog/meta/classIndex.json"]},
+      "nav": {"right": [
+        {"type": "pages"},
+        {"type": "classes"},
+        {"type": "packages"}
+      ]}
+    },
+    "v": "v1.3.0",
+    "theme": "com.eden.orchidliquid.BSDocTheme",
+    "resourcesDir": "/Users/cbrooks/Documents/personal/java/eden/Clog4j/src/orchidDocs/resources",
+    "config": {
+      "github": {
+        "repo": "Clog4j",
+        "branch": "master",
+        "username": "JavaEden"
+      },
+      "about": {
+        "name": "Clog4j",
+        "description": "The power of Log4j wrapped inside the simplicity of logging and String formatting of Clog"
+      },
+      "colors": [
+        "#2a623d",
+        "#000000"
+      ]
+    }
+  },
+  "generators": {},
+  "index": {
+    "assets": {
+      "css": {
+        "files": [
+          {"url": "https://javaeden.github.io/Clog4j/assets/css/bootstrap_theme.css"},
+          {"url": "https://javaeden.github.io/Clog4j/assets/css/docs.css"},
+          {"url": "https://javaeden.github.io/Clog4j/assets/css/orchid.css"}
+        ],
+        "inner": {"dir": {"files": [
+          {"url": "https://javaeden.github.io/Clog4j/assets/css/inner/dir/innerdir.css"},
+          {"url": "https://javaeden.github.io/Clog4j/assets/css/inner/dir/orchidinnerdir.css"}
+        ]}}
+      },
+      "js": {"files": [{"url": "https://javaeden.github.io/Clog4j/assets/js/docs.js"}]}
+    },
+    "pages": {"files": [
+      {
+        "relative_url": "pages/download",
+        "name": "Download",
+        "url": "https://javaeden.github.io/Clog4j/pages/download"
+      },
+      {
+        "relative_url": "pages/logging",
+        "name": "Logging",
+        "url": "https://javaeden.github.io/Clog4j/pages/logging"
+      },
+      {
+        "relative_url": "pages/overview",
+        "name": "Overview",
+        "url": "https://javaeden.github.io/Clog4j/pages/overview"
+      },
+      {
+        "relative_url": "pages/parseltongue",
+        "name": "Parseltongue",
+        "url": "https://javaeden.github.io/Clog4j/pages/parseltongue"
+      }
+    ]},
+    "meta": {"classIndex": {
+      "simpleName": "classIndex",
+      "name": "classIndex",
+      "url": "https://javaeden.github.io/Clog4j//meta/classIndex.json"
+    }},
+    "classes": {
+      "internal": [
+        {
+          "simpleName": "Clog4j",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog4j.Clog4j",
+          "url": "https://javaeden.github.io/Clog4j/classes/com/caseyjbrooks/clog4j/Clog4j"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "ClogLogger",
+            "name": "com.caseyjbrooks.clog.ClogLogger"
+          }],
+          "simpleName": "ClogDebug",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog4j.ClogDebug",
+          "url": "https://javaeden.github.io/Clog4j/classes/com/caseyjbrooks/clog4j/ClogDebug"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "ClogLogger",
+            "name": "com.caseyjbrooks.clog.ClogLogger"
+          }],
+          "simpleName": "ClogError",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog4j.ClogError",
+          "url": "https://javaeden.github.io/Clog4j/classes/com/caseyjbrooks/clog4j/ClogError"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "ClogLogger",
+            "name": "com.caseyjbrooks.clog.ClogLogger"
+          }],
+          "simpleName": "ClogFatal",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog4j.ClogFatal",
+          "url": "https://javaeden.github.io/Clog4j/classes/com/caseyjbrooks/clog4j/ClogFatal"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "ClogLogger",
+            "name": "com.caseyjbrooks.clog.ClogLogger"
+          }],
+          "simpleName": "ClogInfo",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog4j.ClogInfo",
+          "url": "https://javaeden.github.io/Clog4j/classes/com/caseyjbrooks/clog4j/ClogInfo"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "ClogLogger",
+            "name": "com.caseyjbrooks.clog.ClogLogger"
+          }],
+          "simpleName": "ClogTrace",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog4j.ClogTrace",
+          "url": "https://javaeden.github.io/Clog4j/classes/com/caseyjbrooks/clog4j/ClogTrace"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "ClogLogger",
+            "name": "com.caseyjbrooks.clog.ClogLogger"
+          }],
+          "simpleName": "ClogWarn",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog4j.ClogWarn",
+          "url": "https://javaeden.github.io/Clog4j/classes/com/caseyjbrooks/clog4j/ClogWarn"
+        }
+      ],
+      "external": [
+        {
+          "simpleName": "Clog",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog.Clog",
+          "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/Clog"
+        },
+        {
+          "simpleName": "ClogFormatter",
+          "name": "com.caseyjbrooks.clog.ClogFormatter",
+          "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/ClogFormatter"
+        },
+        {
+          "simpleName": "ClogLogger",
+          "name": "com.caseyjbrooks.clog.ClogLogger",
+          "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/ClogLogger"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "ClogLogger",
+            "name": "com.caseyjbrooks.clog.ClogLogger"
+          }],
+          "simpleName": "DefaultLogger",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog.DefaultLogger",
+          "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/DefaultLogger"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "ClogLogger",
+            "name": "com.caseyjbrooks.clog.ClogLogger"
+          }],
+          "simpleName": "EmptyLogger",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog.EmptyLogger",
+          "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/EmptyLogger"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "ClogFormatter",
+            "name": "com.caseyjbrooks.clog.ClogFormatter"
+          }],
+          "simpleName": "Parseltongue",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog.parseltongue.Parseltongue",
+          "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/parseltongue/Parseltongue"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "Annotation",
+            "name": "java.lang.annotation.Annotation"
+          }],
+          "simpleName": "Spell",
+          "name": "com.caseyjbrooks.clog.parseltongue.Spell",
+          "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/parseltongue/Spell"
+        },
+        {
+          "simpleName": "TheStandardBookOfSpells",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog.parseltongue.TheStandardBookOfSpells",
+          "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/parseltongue/TheStandardBookOfSpells"
+        }
+      ]
+    },
+    "packages": [{
+      "name": "com.caseyjbrooks.clog4j",
+      "url": "https://javaeden.github.io/Clog4j/classes/com/caseyjbrooks/clog4j"
+    }]
+  }
+};</script>
+<!-- end:inject scripts -->
+
+<script>
+    $(function() {
+        window.colors = [
+  "#2a623d",
+  "#000000"
+];
+        trianglify();
+        buildNav();
+    });
+</script>
+</body>
+</html>
