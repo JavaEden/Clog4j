@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="index, follow">
+
+<!-- start:inject SEO data -->
+
+<title>Parseltongue</title>
+<script>window.title = 'Parseltongue';</script>
+
+
+
+<title>The power of Log4j wrapped inside the simplicity of logging and String formatting of Clog</title>
+
+
+
+
+
+<link rel="prev" href="/pages/overview">
+
+
+
+<link rel="next" href="/pages/download">
+
+
+
+<!-- end:inject SEO data -->
+
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.ie.min.css" />
+<![endif]-->
+
+
+<link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.min.css" rel="stylesheet" />
+
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.3.0/bootbox.min.js"></script>
+
+
+<!-- start:inject styles -->
+
+
+    
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap_theme.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/assets/css/docs.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/assets/css/orchid.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/assets/css/inner/dir/innerdir.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/assets/css/inner/dir/orchidinnerdir.css" />
+    
+
+<!-- end:inject styles -->
+</head>
+<body>
+
+<a class="github-fork-ribbon left-top" href="https://github.com/JavaEden/Clog4j" title="Fork me on GitHub">Fork me on GitHub</a>
+
+<header class="navbar navbar-fixed-top bs-docs-nav" id="top">
+    <div class="container">
+        <div class="navbar-header" role="banner">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Orchid</a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+
+            
+
+            <ul class="nav navbar-nav">
+                
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                
+                    
+                        
+
+
+
+
+
+
+
+
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">All Pages <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+        
+        
+            
+            <li><a href="/pages/download">Download</a></li>
+            
+            <li><a href="/pages/logging">Logging</a></li>
+            
+            <li><a href="/pages/overview">Overview</a></li>
+            
+            <li><a href="/pages/parseltongue">Parseltongue</a></li>
+            
+        
+    </ul>
+</li>
+
+
+
+                    
+                        
+
+
+
+
+
+
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">All Classes <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+        
+        
+        <li><a href="/classes/com/caseyjbrooks/clog4j/Clog4j">Clog4j</a></li>
+        
+        <li><a href="/classes/com/caseyjbrooks/clog4j/ClogDebug">ClogDebug</a></li>
+        
+        <li><a href="/classes/com/caseyjbrooks/clog4j/ClogError">ClogError</a></li>
+        
+        <li><a href="/classes/com/caseyjbrooks/clog4j/ClogFatal">ClogFatal</a></li>
+        
+        <li><a href="/classes/com/caseyjbrooks/clog4j/ClogInfo">ClogInfo</a></li>
+        
+        <li><a href="/classes/com/caseyjbrooks/clog4j/ClogTrace">ClogTrace</a></li>
+        
+        <li><a href="/classes/com/caseyjbrooks/clog4j/ClogWarn">ClogWarn</a></li>
+        
+    </ul>
+</li>
+
+
+
+
+
+                    
+                        
+
+
+
+
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">All Packages <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+        
+        <li><a href="/classes/com/caseyjbrooks/clog4j">com.caseyjbrooks.clog4j</a></li>
+        
+    </ul>
+</li>
+
+
+
+
+
+
+
+                    
+                
+            </ul>
+
+            
+        </nav>
+    </div>
+</header>
+
+
+
+
+
+<div class="bs-docs-masthead" id="jumbotron">
+    <div class="container">
+        <h1 class="home-title">Parseltongue</h1>
+    </div>
+</div>
+
+<div class="container bs-docs-container">
+    <div class="row">
+        <div class="col-md-12" role="main">
+            <section class="bs-docs-section">
+                <h1>Parseltongue</h1>
+<h3>Basic Syntax</h3>
+<p>Building Strings to be put into logs (or anything else for that matter), is painful. One of the greatest things in many modern languages is string interpolation, which is the idea that I attempt to capture with this formatting language. It's best shown with a basic example of the language's syntax:</p>
+<pre><code>Clog.log(&quot;Hello, my name is #{ $1 } #{ $2 }&quot;, &quot;Harry&quot;, &quot;Potter&quot;);
+// prints &quot;Hello my name is Harry Potter&quot;
+</code></pre>
+<p>This should feel familiar to anyone who has worked with Ruby or Coffeescript, because that is where I drew inspiration. Anywhere with the message you want to print a variable, add <code>#{ $i }</code>, where <code>i</code> is the index of that object pass in as varargs, starting from 1. Any object passed in gets printed by calling irs <code>toString()</code>.</p>
+<p>I also really liked the implementation of AngularJs Filters but always disliked its syntax, so I improved it with what I call Spells, which are little more than Java methods which can be used from within the Parseltongue language. Clog comes preconfigured with the spells listed below, and you can add your own, too. Casting a basic spell looks like this:</p>
+<pre><code>Clog.log(&quot;Hello, my name is #{ $1 | uppercase } #{ $2 | lowercase }&quot;, &quot;Harry&quot;, &quot;Potter&quot;);
+// prints &quot;Hello my name is HARRY potter&quot;
+</code></pre>
+<p>Spells can also be cast in sequence, like so:</p>
+<pre><code>Clog.log(&quot;Hello, my name is #{ $1 | uppercase | count }&quot;, &quot;Harry Potter&quot;);
+// prints &quot;Hello my name is 12&quot;
+</code></pre>
+<p>Spells can accept an arbitrary number of parameters, which follows the standard function-calling syntax:</p>
+<pre><code>Clog.log(&quot;Hello, my name is #{ $1 | spellWithManyParameters($1, 42, true, 'string') }&quot;, &quot;Harry Potter&quot;);
+</code></pre>
+<p>The basic clog syntax looks like <code>#{ initialReagent ( | spell )+ }</code>. Spells are what I just described above, and reagents are parameters passed to spells and eventually printed out. The types of reagents are listed below.</p>
+<table class="table table-condensed">
+    <thead>
+    <tr>
+        <th>Reagent Type</th>
+        <th>Example</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Parameter</td>
+        <td><code>$1</code></td>
+        <td>Get one of the parameters passed in to the format method. Indices start at 1. If the index is out of bounds, the object returned will be <code>null</code></td>
+    </tr>
+    <tr>
+        <td>Result</td>
+        <td><code>@1</code></td>
+        <td>Get the object that was the result of a previous clog, before it was turned to a String. Indices start at 1. If the index is out of bounds, the object returned will be <code>null</code></td>
+    </tr>
+    <tr>
+        <td>Literal Integer</td>
+        <td><code>1</code>, <code>-1</code></td>
+        <td>A signed literal integer</td>
+    </tr>
+    <tr>
+        <td>Literal Double</td>
+        <td><code>1.5</code>, <code>-1.5</code></td>
+        <td>A signed literal double-precision floating point number</td>
+    </tr>
+    <tr>
+        <td>Literal Boolean</td>
+        <td><code>true</code>, <code>false</code></td>
+        <td>A literal boolean</td>
+    </tr>
+    <tr>
+        <td>Literal String</td>
+        <td><code>'Hello world'</code></td>
+        <td>A literal string, surrounded by single-quotes</td>
+    </tr>
+    <tr>
+        <td>Null</td>
+        <td><code>null</code>, <code>$0</code></td>
+        <td>Null. $0 will always be out of bounds, and can be considered shorthand for null</td>
+    </tr>
+    </tbody>
+</table>
+<h3>Advanced syntax</h3>
+<p>In addition to injecting objects and formatting those objects for output within the clog, Parseltongue provides support for advanced property finding, via indexers. Parselmouth supports three basic types of indexers, array indexers, map indexers, and property indexers, outlined below. These indexers can be applied to any <code>param</code> reagent, <code>result</code> reagent, or spell result. One caveat is that when applying an indexer to a spell result, if the spell expects no additional parameters, you must add empty parentheses to the spell. Examples will follow with the indexer outlines below:</p>
+<p><br><b>Array Indexers</b><br>
+Parselmouth allows basic arrays and objects implementing the <code>List</code> interface easy access to individual members of the array-type-structure. The syntax follows the familiar Java array-indexing syntax, and indexing starts at 0, as expected.</p>
+<pre><code>List&lt;String&gt; namesList = new ArrayList&lt;String&gt;();
+namesList.add(&quot;Harry&quot;);
+namesList.add(&quot;Ron&quot;);
+namesList.add(&quot;Hermione&quot;);
+namesList.add(&quot;Fred and George&quot;);
+
+String[] namesArray = new String[] {
+&quot;Harry&quot;,
+&quot;Ron&quot;,
+&quot;Hermione&quot;,
+&quot;Fred and George&quot;
+};
+
+// note that when passing an array to be a parameter, you must pass at least one other object after it so that it does not get expanded into its component objects as varargs
+Clog.log(&quot;#{ $2 } and #{ $1[1] }&quot;, namesArray, &quot;Harry&quot;);
+// prints Harry and Ron
+
+Clog.log(&quot;#{ $2 | lowercase } and #{ $1 | returnListDirectly()[2] | uppercase }&quot;, namesList, &quot;Harry&quot;);
+// prints harry and HERMIONE
+</code></pre>
+<p><br><b>Map Indexers</b><br>
+Parselmouth provides simple access to map-type objects where the key is a String. This is any object implementing the <code>Map</code> interface (where implicitly, the first type-parameter of that map is of type <code>String</code>), or alternatively, any object that contains a method with the following signature: <code>get(String)</code>. In the case that the object is a <code>Map</code>, Parseltongue will cast it to a map and call its' get method, while it will use reflection to try and find a <code>get(String)</code> method on any other object type. This makes it more efficient to access <code>Map</code> objects, but allows the possibilty of accessing properties of other common objects with a string-lookup <code>get</code> method, such as <code>org.json.JSONObject</code>. Map indexers are called by passing a string literal as the key within brackets:</p>
+<pre><code>Map&lt;String, String&gt; namesMap = new HashMap&lt;String, String&gt;();
+namesMap.put(&quot;harry&quot;, &quot;Harry&quot;);
+namesMap.put(&quot;ron&quot;, &quot;Ron&quot;);
+namesMap.put(&quot;hermione&quot;, &quot;Hermione&quot;);
+namesMap.put(&quot;fred and george&quot;, &quot;Fred and George&quot;);
+
+Clog.log(&quot;#{ $1['ron'] }, #{ $1['fred and george'] } are brothers&quot;, namesMap);
+// prints Ron, Fred and George are brothers
+
+Clog.log(&quot;#{ $1['ron'] | lowercase }, #{ $1 | returnMapDirectly['fred and george'] | uppercase} are brothers&quot;, namesMap);
+// prints ron, FRED AND GEORGE are brothers
+</code></pre>
+<p><br><b>Property Indexers</b><br>
+Parselmouth can also use reflection to find properties of objects by name. By passing a single word, unquoted, within brackets as an indexer, Parseltongue will attempt to find and access a field matching that name within the specified object, returning the object at that field if it exists. By default, Parseltongue will only search for public members, which can be anywhere in the objects class hierarchy. Private members can only be accessed only if they are declared in the class of the object passed to the indexer and you set private fields to be accessible by calling <code>parseltongueInstance.setPrivateFieldsAccessible(true);</code>.</p>
+<pre><code>public static class ClassWithProperties {
+private String privateHarry = &quot;Harry (Private)&quot;;
+public String publicHarry = &quot;Harry (Public)&quot;;
+}
+
+Clog.log(&quot;#{ $1[publicHarry] }&quot;, new ClassWithProperties());
+// prints &quot;Harry (Public)&quot;, because that field is public
+
+Clog.log(&quot;#{ $1[privateHarry] }&quot;, new ClassWithProperties());
+// prints nothing, because 'privateHarry' is a private field and cannot be accessed
+
+Parseltongue pt = new Parseltongue();
+pt.setPrivateFieldsAccessible(true);
+Clog.setFormatter(pt);
+Clog.log(&quot;#{ $1[privateHarry] }&quot;, new ClassWithProperties());
+// prints &quot;Harry (Private)&quot;, because private fields have been made accessible
+</code></pre>
+<h3>Syntax Error Recovery</h3>
+<p>In the case there is a syntax error, Parseltongue will try to recover from the error and continue on. When there is a syntax error, that clog will be removed and nothing will be output, and a <code>null</code> will be added to the results list so results indexing is not affected; all subsequent clogs in the format string will not be affected from previous errors.</p>
+<h1>The Spellbook</h1>
+<h3>Spells</h3>
+<p>Spells are special methods intended to modify an object so that it can be printed more meaningfully. Spells are defined to be static and accept at least one parameter, but may accept more, and must return an object of any type. The first parameter will always be the initial reagent or the result from the previous spell in the pipeline, and any subsequent parameters must be defined from within the format string.</p>
+<h3>Adding Spells</h3>
+<p>Spells can be added by defining them with the annotation <code>@Spell</code> and telling Parseltongue to find all spells in that class. By default, the method name will be how to call that spell in the formatter, but you can supply the annotation with a 'name' parameter with the desired name. Multiple spells can have the same name, and they will be overloaded in a similar way to normal Java method overloading. An example is shown below:</p>
+<pre><code>public class SpellClass {
+
+@Spell
+public String getClassName(Object object) {
+return object.getClass().getSimpleName();
+}
+
+@Spell(name=&quot;fullClassName&quot;)
+public String getFullClassName(Object object) {
+return object.getClass().getSimpleName();
+}
+}
+
+Parseltongue pt = new Parseltongue();
+pt.findSpells(SpellClass.class);
+</code></pre>
+<p>To add spells to the Clog formatter, you must setup your Parseltongue with spells and then set it as the current Clog profile's formatter.</p>
+<pre><code>Parseltongue pt = new Parseltongue();
+pt.findSpells(SpellClass.class);
+
+Clog.setFormatter(pt);
+</code></pre>
+<h3>Included Spells</h3>
+<p>Parseltongue comes with the numerous formatting functions in The Standard Book Of Spells. View the docs for the
+TheStandardBookOfSpells class.</p>
+
+            </section>
+        </div>
+    </div>
+</div>
+
+
+<footer class="bs-docs-footer" role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <nav aria-label="navigateClasses">
+                    <ul class="pager">
+                        
+                        <li class="previous"><a href="/pages/overview"><span aria-hidden="true">&larr;</span> Overview</a></li>
+                        
+
+                        
+                        <li class="next"><a href="/pages/download">Download <span aria-hidden="true">&rarr;</span></a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <br>
+
+        <p>
+            Licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>,
+            documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
+        </p>
+        <p>
+            Documentation template based on the <a href="https://github.com/mistic100/jekyll-bootstrap-doc">Jekyll Bootstrap Doc</a> Jekyll theme by the <a href="http://getbootstrap.com">Bootstrap team</a>
+        </p>
+
+        <ul class="bs-docs-footer-links muted">
+            <li>Currently v1.3.0</li>
+        </ul>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.1.2/trianglify.min.js"></script>
+
+<!-- inject scripts -->
+
+
+    
+    <script src="/assets/js/docs.js"></script>
+    
+
+<script>window.root = {
+  "options": {
+    "d": "/Users/cbrooks/Documents/personal/java/eden/Clog4j/build/docs/javadoc",
+    "data": {
+      "additionalClasses": {"links": ["https://javaeden.github.io/Clog/meta/classIndex.json"]},
+      "nav": {"right": [
+        {"type": "pages"},
+        {"type": "classes"},
+        {"type": "packages"}
+      ]}
+    },
+    "v": "v1.3.0",
+    "theme": "com.eden.orchidliquid.BSDocTheme",
+    "resourcesDir": "/Users/cbrooks/Documents/personal/java/eden/Clog4j/src/orchidDocs/resources",
+    "config": {
+      "github": {
+        "repo": "Clog4j",
+        "branch": "master",
+        "username": "JavaEden"
+      },
+      "about": {
+        "name": "Clog4j",
+        "description": "The power of Log4j wrapped inside the simplicity of logging and String formatting of Clog"
+      },
+      "colors": [
+        "#2a623d",
+        "#000000"
+      ]
+    }
+  },
+  "generators": {},
+  "index": {
+    "assets": {
+      "css": {
+        "files": [
+          {"url": "/assets/css/bootstrap_theme.css"},
+          {"url": "/assets/css/docs.css"},
+          {"url": "/assets/css/orchid.css"}
+        ],
+        "inner": {"dir": {"files": [
+          {"url": "/assets/css/inner/dir/innerdir.css"},
+          {"url": "/assets/css/inner/dir/orchidinnerdir.css"}
+        ]}}
+      },
+      "js": {"files": [{"url": "/assets/js/docs.js"}]}
+    },
+    "pages": {"files": [
+      {
+        "relative_url": "pages/download",
+        "name": "Download",
+        "url": "/pages/download"
+      },
+      {
+        "relative_url": "pages/logging",
+        "name": "Logging",
+        "url": "/pages/logging"
+      },
+      {
+        "relative_url": "pages/overview",
+        "name": "Overview",
+        "url": "/pages/overview"
+      },
+      {
+        "relative_url": "pages/parseltongue",
+        "name": "Parseltongue",
+        "url": "/pages/parseltongue"
+      }
+    ]},
+    "meta": {"classIndex": {
+      "simpleName": "classIndex",
+      "name": "classIndex",
+      "url": "//meta/classIndex.json"
+    }},
+    "classes": {
+      "internal": [
+        {
+          "simpleName": "Clog4j",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog4j.Clog4j",
+          "url": "/classes/com/caseyjbrooks/clog4j/Clog4j"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "ClogLogger",
+            "name": "com.caseyjbrooks.clog.ClogLogger"
+          }],
+          "simpleName": "ClogDebug",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog4j.ClogDebug",
+          "url": "/classes/com/caseyjbrooks/clog4j/ClogDebug"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "ClogLogger",
+            "name": "com.caseyjbrooks.clog.ClogLogger"
+          }],
+          "simpleName": "ClogError",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog4j.ClogError",
+          "url": "/classes/com/caseyjbrooks/clog4j/ClogError"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "ClogLogger",
+            "name": "com.caseyjbrooks.clog.ClogLogger"
+          }],
+          "simpleName": "ClogFatal",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog4j.ClogFatal",
+          "url": "/classes/com/caseyjbrooks/clog4j/ClogFatal"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "ClogLogger",
+            "name": "com.caseyjbrooks.clog.ClogLogger"
+          }],
+          "simpleName": "ClogInfo",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog4j.ClogInfo",
+          "url": "/classes/com/caseyjbrooks/clog4j/ClogInfo"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "ClogLogger",
+            "name": "com.caseyjbrooks.clog.ClogLogger"
+          }],
+          "simpleName": "ClogTrace",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog4j.ClogTrace",
+          "url": "/classes/com/caseyjbrooks/clog4j/ClogTrace"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "ClogLogger",
+            "name": "com.caseyjbrooks.clog.ClogLogger"
+          }],
+          "simpleName": "ClogWarn",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog4j.ClogWarn",
+          "url": "/classes/com/caseyjbrooks/clog4j/ClogWarn"
+        }
+      ],
+      "external": [
+        {
+          "simpleName": "Clog",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog.Clog",
+          "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/Clog"
+        },
+        {
+          "simpleName": "ClogFormatter",
+          "name": "com.caseyjbrooks.clog.ClogFormatter",
+          "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/ClogFormatter"
+        },
+        {
+          "simpleName": "ClogLogger",
+          "name": "com.caseyjbrooks.clog.ClogLogger",
+          "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/ClogLogger"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "ClogLogger",
+            "name": "com.caseyjbrooks.clog.ClogLogger"
+          }],
+          "simpleName": "DefaultLogger",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog.DefaultLogger",
+          "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/DefaultLogger"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "ClogLogger",
+            "name": "com.caseyjbrooks.clog.ClogLogger"
+          }],
+          "simpleName": "EmptyLogger",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog.EmptyLogger",
+          "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/EmptyLogger"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "ClogFormatter",
+            "name": "com.caseyjbrooks.clog.ClogFormatter"
+          }],
+          "simpleName": "Parseltongue",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog.parseltongue.Parseltongue",
+          "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/parseltongue/Parseltongue"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "Annotation",
+            "name": "java.lang.annotation.Annotation"
+          }],
+          "simpleName": "Spell",
+          "name": "com.caseyjbrooks.clog.parseltongue.Spell",
+          "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/parseltongue/Spell"
+        },
+        {
+          "simpleName": "TheStandardBookOfSpells",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog.parseltongue.TheStandardBookOfSpells",
+          "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/parseltongue/TheStandardBookOfSpells"
+        }
+      ]
+    },
+    "packages": [{
+      "name": "com.caseyjbrooks.clog4j",
+      "url": "/classes/com/caseyjbrooks/clog4j"
+    }]
+  }
+};</script>
+<!-- end:inject scripts -->
+
+<script>
+    $(function() {
+        window.colors = [
+  "#2a623d",
+  "#000000"
+];
+        trianglify();
+        buildNav();
+    });
+</script>
+</body>
+</html>

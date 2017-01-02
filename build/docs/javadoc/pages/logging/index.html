@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="index, follow">
+
+<!-- start:inject SEO data -->
+
+<title>Logging</title>
+<script>window.title = 'Logging';</script>
+
+
+
+<title>The power of Log4j wrapped inside the simplicity of logging and String formatting of Clog</title>
+
+
+
+
+
+<link rel="prev" href="/pages/download">
+
+
+
+<link rel="next" href="/pages/overview">
+
+
+
+<!-- end:inject SEO data -->
+
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.ie.min.css" />
+<![endif]-->
+
+
+<link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.min.css" rel="stylesheet" />
+
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.3.0/bootbox.min.js"></script>
+
+
+<!-- start:inject styles -->
+
+
+    
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap_theme.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/assets/css/docs.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/assets/css/orchid.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/assets/css/inner/dir/innerdir.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/assets/css/inner/dir/orchidinnerdir.css" />
+    
+
+<!-- end:inject styles -->
+</head>
+<body>
+
+<a class="github-fork-ribbon left-top" href="https://github.com/JavaEden/Clog4j" title="Fork me on GitHub">Fork me on GitHub</a>
+
+<header class="navbar navbar-fixed-top bs-docs-nav" id="top">
+    <div class="container">
+        <div class="navbar-header" role="banner">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Orchid</a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+
+            
+
+            <ul class="nav navbar-nav">
+                
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                
+                    
+                        
+
+
+
+
+
+
+
+
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">All Pages <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+        
+        
+            
+            <li><a href="/pages/download">Download</a></li>
+            
+            <li><a href="/pages/logging">Logging</a></li>
+            
+            <li><a href="/pages/overview">Overview</a></li>
+            
+            <li><a href="/pages/parseltongue">Parseltongue</a></li>
+            
+        
+    </ul>
+</li>
+
+
+
+                    
+                        
+
+
+
+
+
+
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">All Classes <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+        
+        
+        <li><a href="/classes/com/caseyjbrooks/clog4j/Clog4j">Clog4j</a></li>
+        
+        <li><a href="/classes/com/caseyjbrooks/clog4j/ClogDebug">ClogDebug</a></li>
+        
+        <li><a href="/classes/com/caseyjbrooks/clog4j/ClogError">ClogError</a></li>
+        
+        <li><a href="/classes/com/caseyjbrooks/clog4j/ClogFatal">ClogFatal</a></li>
+        
+        <li><a href="/classes/com/caseyjbrooks/clog4j/ClogInfo">ClogInfo</a></li>
+        
+        <li><a href="/classes/com/caseyjbrooks/clog4j/ClogTrace">ClogTrace</a></li>
+        
+        <li><a href="/classes/com/caseyjbrooks/clog4j/ClogWarn">ClogWarn</a></li>
+        
+    </ul>
+</li>
+
+
+
+
+
+                    
+                        
+
+
+
+
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">All Packages <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+        
+        <li><a href="/classes/com/caseyjbrooks/clog4j">com.caseyjbrooks.clog4j</a></li>
+        
+    </ul>
+</li>
+
+
+
+
+
+
+
+                    
+                
+            </ul>
+
+            
+        </nav>
+    </div>
+</header>
+
+
+
+
+
+<div class="bs-docs-masthead" id="jumbotron">
+    <div class="container">
+        <h1 class="home-title">Logging</h1>
+    </div>
+</div>
+
+<div class="container bs-docs-container">
+    <div class="row">
+        <div class="col-md-12" role="main">
+            <section class="bs-docs-section">
+                <h1>Logging</h1>
+<h3>The Basics</h3>
+<p>Logging with Clog is simple. Simply pick your logging priority and call that static method with the data you want to log. Clog will figure out the rest. The most basic log looks like this:</p>
+<p><code>Clog.log(&quot;Hello World&quot;);</code></p>
+<p>Clog has six built-in priorities, but can support as many or as few as you need. Those six priorities, from lowest to highest, are listed in the table below. In addition to those six priorities, there is a default logger which will be used in the case that a logger for a priority is not defined, and you can define your own custom logging priorities and refere to them by their key.</p>
+<table class="table table-condensed">
+    <thead>
+    <tr>
+        <th>Priority</th>
+        <th>Key</th>
+        <th>Clog method</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><b>Verbose</b></td>
+        <td><code>Clog.KEY_V, "v"</code></td>
+        <td><code>Clog.v(...)</code></td>
+    </tr>
+    <tr>
+        <td><b>Debug</b></td>
+        <td><code>Clog.KEY_D, "d"</code></td>
+        <td><code>Clog.d(...)</code></td>
+    </tr>
+    <tr>
+        <td><b>Info</b></td>
+        <td><code>Clog.KEY_I, "i"</code></td>
+        <td><code>Clog.i(...)</code></td>
+    </tr>
+    <tr>
+        <td><b>Warning</b></td>
+        <td><code>Clog.KEY_W, "w"</code></td>
+        <td><code>Clog.w(...)</code></td>
+    </tr>
+    <tr>
+        <td><b>Error</b></td>
+        <td><code>Clog.KEY_E, "e"</code></td>
+        <td><code>Clog.e(...)</code></td>
+    </tr>
+    <tr>
+        <td><b>Fatal (What a Terrible Failure)</b></td>
+        <td><code>Clog.KEY_WTF, "wtf"</code></td>
+        <td><code>Clog.wtf(...)</code></td>
+    </tr>
+    <tr>
+        <td><b>Default</b></td>
+        <td><code>null</code></td>
+        <td><code>Clog.log(...)</code></td>
+    </tr>
+    <tr>
+        <td><b>Custom</b></td>
+        <td>anything (see below)</td>
+        <td><code>Clog.logger(key, ...)</code></td>
+    </tr>
+    </tbody>
+</table>
+<p>For each of the above priorities, there are six logging methods that can be used, described below. Here, I use all with the 'log' priority, but all priorities and custom loggers support the same API:</p>
+<table class="table table-condensed">
+    <thead>
+    <tr>
+        <th>Method</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><pre>log(Throwable throwable)</pre></td>
+        <td>Logs an exception. Uses the default tag (see below).</td>
+    </tr>
+    <tr>
+        <td><pre>log(String tag, Throwable throwable)</pre></td>
+        <td>Logs an exception with the given tag.</td>
+    </tr>
+    <tr>
+        <td><pre>log(String message, Object... args)</pre></td>
+        <td>Formats the message with arguments and logs the message. Uses the default tag.</td>
+    </tr>
+    <tr>
+        <td><pre>log(String tag, String message, Object... args)</pre></td>
+        <td>Formats the message with arguments and logs the message with the given tag.</td>
+    </tr>
+    <tr>
+        <td><pre>log(String formatString, Throwable throwable, Object... args)</pre></td>
+        <td>Logs an exception with the formatted message. Uses the default tag.</td>
+    </tr>
+    <tr>
+        <td><pre>log(String tag, String formatString, Throwable throwable, Object... args)</pre></td>
+        <td>Logs an exception with the formatted message and the given tag.</td>
+    </tr>
+    </tbody>
+</table>
+</p>
+<h3>Default Tag</h3>
+<p>Each message will be logged with a tag. If no tag is supplied to the logging method, then Clog will use a default tag. Any string can be used as a tag, but it should be kept short. The Android Log, which this library is inspired by, puts a strict limit of 26 characters on a tag, but no such limit is used with Clog. The default tag can be set with <code>setDefaultTag(String)</code>, but if the default tag is null, Clog will attempt to find the caller's simple class name and use that as the tag.</p>
+<h3>Custom Loggers</h3>
+<p>By default, Clog has only a single logger implemented, which is a wrapper around <code>System.out.println()</code> which concatenates the tag and message. For any large applications, you will want to replace this basic logger with wrappers around your standard or more powerful logging libraries.</p>
+<blockquote>
+<p><i>See <a href="https://github.com/JavaEden/Android-Clog">Clog for Android</a> and <a href="https://github.com/JavaEden/Clog4j">Clog4j</a> for specialized Clog implementations</i></p>
+</blockquote>
+<p>The simple way to use your custom loggers is to add it directly to Clog. You can also set up multiple profiles, each with their own set of loggers (see below for more on profiles). A custom logger is any class that implements the <code>ClogLogger</code> interface, which has the following methods:</p>
+<table class="table table-condensed">
+    <thead>
+    <tr>
+        <th>Method</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><pre>boolean isActive()</pre></td>
+        <td>Checks whether this logger actually does anything. As an optimization, messages will not be formatted if they are sent to an inactive logger.</td>
+    </tr>
+    <tr>
+        <td><pre>int log(String tag, String message)</pre></td>
+        <td>Logs a message with the given tag. Returns value is mostly unnecessary, but can be used to return metadata such as the number of bytes written.</td>
+    </tr>
+    <tr>
+        <td><pre>int log(String tag, String message, Throwable throwable)</pre></td>
+        <td>Logs a message and a throwable with the given tag. Returns value is mostly unnecessary, but can be used to return metadata such as the number of bytes written.</td>
+    </tr>
+    </tbody>
+</table>
+<p>To add your custom logger to Clog, call <code>addLogger</code> with your key and an instance of your custom logger, or set it as the default with <code>setDefaultLogger</code>. Loggers can be removed with <code>removeLogger</code>. Below is an example of how to add and use your custom loggers.</p>
+<pre><code>MyLogger myLogger = new MyLogger();
+
+// set it as a fully custom logger
+Clog.addLogger(&quot;loggerKey&quot;, myLogger);
+Clog.logger(&quot;loggerKey&quot;, &quot;Hello world&quot;);
+
+// set it as a priority logger
+Clog.addLogger(KEY_I, myLogger);
+Clog.i(&quot;Hello world&quot;);
+
+// set it as the default logger
+Clog.setDefaultLogger(myLogger);
+// OR
+Clog.addLogger(null, myLogger);
+Clog.log(&quot;loggerKey&quot;, &quot;Hello world&quot;);
+</code></pre>
+<h3>Multiple Environments</h3>
+<p>Under the hood, the String formatter and all loggers are held within instances of Clog objects, which are then access through a static hashmap of all available instances. This means you can set up a profile with all your desired loggers and parsers, and switch between profiles at will. Below is an example of setting up and using a custom profile, which is based on the Android Clog library's implementation.</p>
+<pre><code>// Create your clog profile with its loggers and chosen String formatter (see below)
+ClogFormatter formatter = new Parseltongue();
+HashMap&lt;String, ClogLogger&gt; loggers = new HashMap&lt;String, ClogLogger&gt;();
+loggers.put(null, new ClogI());
+loggers.put(&quot;d&quot;, new ClogD());
+loggers.put(&quot;e&quot;, new ClogE());
+loggers.put(&quot;i&quot;, new ClogI());
+loggers.put(&quot;v&quot;, new ClogV());
+loggers.put(&quot;w&quot;, new ClogW());
+loggers.put(&quot;wtf&quot;, new ClogWTF());
+
+Clog dev = new Clog(loggers, formatter);
+
+Clog.addProfile(&quot;dev&quot;, dev); //add the profile to clog
+Clog.setCurrentProfile(&quot;dev&quot;); //sets the current profile to &quot;dev&quot;
+Clog.setCurrentProfile(dev, &quot;dev&quot;); //Adds the profile to clog and switch to use it
+</code></pre>
+<h3>Formatters</h3>
+<p>Clog is designed to make logging easier by allowing messages to be formatted with various arguments. It comes with my custom formatting language, Parseltongue, but the formatter implementation is separated out as in interface so you can use any formatter you wish. A custom formatter is any class that implements the <code>ClogFormatter</code> interface, which has the following method:</p>
+<table class="table table-condensed">
+    <thead>
+    <tr>
+        <th>Method</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><pre>String format(String message, Object... params)</pre></td>
+        <td>Formats the message with the given parameters</td>
+    </tr>
+    </tbody>
+</table>
+<p>Custom formatters can be supplied to the profile as shown above, or added directly to the current profile with the <code>setFormatter(ClogFormatter)</code> method.</p>
+
+            </section>
+        </div>
+    </div>
+</div>
+
+
+<footer class="bs-docs-footer" role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <nav aria-label="navigateClasses">
+                    <ul class="pager">
+                        
+                        <li class="previous"><a href="/pages/download"><span aria-hidden="true">&larr;</span> Download</a></li>
+                        
+
+                        
+                        <li class="next"><a href="/pages/overview">Overview <span aria-hidden="true">&rarr;</span></a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <br>
+
+        <p>
+            Licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>,
+            documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
+        </p>
+        <p>
+            Documentation template based on the <a href="https://github.com/mistic100/jekyll-bootstrap-doc">Jekyll Bootstrap Doc</a> Jekyll theme by the <a href="http://getbootstrap.com">Bootstrap team</a>
+        </p>
+
+        <ul class="bs-docs-footer-links muted">
+            <li>Currently v1.3.0</li>
+        </ul>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.1.2/trianglify.min.js"></script>
+
+<!-- inject scripts -->
+
+
+    
+    <script src="/assets/js/docs.js"></script>
+    
+
+<script>window.root = {
+  "options": {
+    "d": "/Users/cbrooks/Documents/personal/java/eden/Clog4j/build/docs/javadoc",
+    "data": {
+      "additionalClasses": {"links": ["https://javaeden.github.io/Clog/meta/classIndex.json"]},
+      "nav": {"right": [
+        {"type": "pages"},
+        {"type": "classes"},
+        {"type": "packages"}
+      ]}
+    },
+    "v": "v1.3.0",
+    "theme": "com.eden.orchidliquid.BSDocTheme",
+    "resourcesDir": "/Users/cbrooks/Documents/personal/java/eden/Clog4j/src/orchidDocs/resources",
+    "config": {
+      "github": {
+        "repo": "Clog4j",
+        "branch": "master",
+        "username": "JavaEden"
+      },
+      "about": {
+        "name": "Clog4j",
+        "description": "The power of Log4j wrapped inside the simplicity of logging and String formatting of Clog"
+      },
+      "colors": [
+        "#2a623d",
+        "#000000"
+      ]
+    }
+  },
+  "generators": {},
+  "index": {
+    "assets": {
+      "css": {
+        "files": [
+          {"url": "/assets/css/bootstrap_theme.css"},
+          {"url": "/assets/css/docs.css"},
+          {"url": "/assets/css/orchid.css"}
+        ],
+        "inner": {"dir": {"files": [
+          {"url": "/assets/css/inner/dir/innerdir.css"},
+          {"url": "/assets/css/inner/dir/orchidinnerdir.css"}
+        ]}}
+      },
+      "js": {"files": [{"url": "/assets/js/docs.js"}]}
+    },
+    "pages": {"files": [
+      {
+        "relative_url": "pages/download",
+        "name": "Download",
+        "url": "/pages/download"
+      },
+      {
+        "relative_url": "pages/logging",
+        "name": "Logging",
+        "url": "/pages/logging"
+      },
+      {
+        "relative_url": "pages/overview",
+        "name": "Overview",
+        "url": "/pages/overview"
+      },
+      {
+        "relative_url": "pages/parseltongue",
+        "name": "Parseltongue",
+        "url": "/pages/parseltongue"
+      }
+    ]},
+    "meta": {"classIndex": {
+      "simpleName": "classIndex",
+      "name": "classIndex",
+      "url": "//meta/classIndex.json"
+    }},
+    "classes": {
+      "internal": [
+        {
+          "simpleName": "Clog4j",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog4j.Clog4j",
+          "url": "/classes/com/caseyjbrooks/clog4j/Clog4j"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "ClogLogger",
+            "name": "com.caseyjbrooks.clog.ClogLogger"
+          }],
+          "simpleName": "ClogDebug",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog4j.ClogDebug",
+          "url": "/classes/com/caseyjbrooks/clog4j/ClogDebug"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "ClogLogger",
+            "name": "com.caseyjbrooks.clog.ClogLogger"
+          }],
+          "simpleName": "ClogError",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog4j.ClogError",
+          "url": "/classes/com/caseyjbrooks/clog4j/ClogError"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "ClogLogger",
+            "name": "com.caseyjbrooks.clog.ClogLogger"
+          }],
+          "simpleName": "ClogFatal",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog4j.ClogFatal",
+          "url": "/classes/com/caseyjbrooks/clog4j/ClogFatal"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "ClogLogger",
+            "name": "com.caseyjbrooks.clog.ClogLogger"
+          }],
+          "simpleName": "ClogInfo",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog4j.ClogInfo",
+          "url": "/classes/com/caseyjbrooks/clog4j/ClogInfo"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "ClogLogger",
+            "name": "com.caseyjbrooks.clog.ClogLogger"
+          }],
+          "simpleName": "ClogTrace",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog4j.ClogTrace",
+          "url": "/classes/com/caseyjbrooks/clog4j/ClogTrace"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "ClogLogger",
+            "name": "com.caseyjbrooks.clog.ClogLogger"
+          }],
+          "simpleName": "ClogWarn",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog4j.ClogWarn",
+          "url": "/classes/com/caseyjbrooks/clog4j/ClogWarn"
+        }
+      ],
+      "external": [
+        {
+          "simpleName": "Clog",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog.Clog",
+          "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/Clog"
+        },
+        {
+          "simpleName": "ClogFormatter",
+          "name": "com.caseyjbrooks.clog.ClogFormatter",
+          "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/ClogFormatter"
+        },
+        {
+          "simpleName": "ClogLogger",
+          "name": "com.caseyjbrooks.clog.ClogLogger",
+          "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/ClogLogger"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "ClogLogger",
+            "name": "com.caseyjbrooks.clog.ClogLogger"
+          }],
+          "simpleName": "DefaultLogger",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog.DefaultLogger",
+          "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/DefaultLogger"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "ClogLogger",
+            "name": "com.caseyjbrooks.clog.ClogLogger"
+          }],
+          "simpleName": "EmptyLogger",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog.EmptyLogger",
+          "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/EmptyLogger"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "ClogFormatter",
+            "name": "com.caseyjbrooks.clog.ClogFormatter"
+          }],
+          "simpleName": "Parseltongue",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog.parseltongue.Parseltongue",
+          "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/parseltongue/Parseltongue"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "Annotation",
+            "name": "java.lang.annotation.Annotation"
+          }],
+          "simpleName": "Spell",
+          "name": "com.caseyjbrooks.clog.parseltongue.Spell",
+          "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/parseltongue/Spell"
+        },
+        {
+          "simpleName": "TheStandardBookOfSpells",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog.parseltongue.TheStandardBookOfSpells",
+          "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/parseltongue/TheStandardBookOfSpells"
+        }
+      ]
+    },
+    "packages": [{
+      "name": "com.caseyjbrooks.clog4j",
+      "url": "/classes/com/caseyjbrooks/clog4j"
+    }]
+  }
+};</script>
+<!-- end:inject scripts -->
+
+<script>
+    $(function() {
+        window.colors = [
+  "#2a623d",
+  "#000000"
+];
+        trianglify();
+        buildNav();
+    });
+</script>
+</body>
+</html>

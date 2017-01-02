@@ -1,0 +1,116 @@
+.bs-docs-nav {
+  border-bottom: medium solid #41985e !important;
+  -webkit-box-shadow: 0px 3px 12px 0px #888;
+  -moz-box-shadow: 0px 3px 12px 0px #888;
+  box-shadow: 0px 3px 12px 0px #888; }
+  .bs-docs-nav .navbar-brand, .bs-docs-nav .navbar-nav > li > a {
+    color: #000000; }
+    .bs-docs-nav .navbar-brand:hover, .bs-docs-nav .navbar-nav > li > a:hover {
+      color: #2a623d; }
+  .bs-docs-nav .navbar-nav > li > a:hover, .bs-docs-nav .navbar-nav > .active > a, .bs-docs-nav .navbar-nav > .active > a:hover {
+    color: #2a623d; }
+
+.bs-docs-sidebar .nav > .active > a, .bs-docs-sidebar .nav > .active:hover > a, .bs-docs-sidebar .nav > .active:focus > a {
+  color: #2a623d;
+  border-left: 2px solid #2a623d; }
+
+.bs-docs-sidebar .nav > li > a:hover, .bs-docs-sidebar .nav > li > a:focus {
+  color: #2a623d;
+  border-left: 1px solid #2a623d; }
+
+.bs-docs-sidebar.affix {
+  top: 72px !important; }
+
+.back-to-top:hover {
+  color: #2a623d; }
+
+a {
+  color: #49a969; }
+
+a:hover {
+  color: #398653; }
+
+.bs-docs-masthead .version {
+  color: #55b676; }
+
+.btn-outline-inverse:hover, .btn-outline-inverse:focus, .btn-outline-inverse:active {
+  color: #2a623d; }
+
+.btn-outline-inverse {
+  border-color: #55b676; }
+
+blockquote {
+  border-left: 5px solid #000000; }
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+  background-color: #55b676; }
+
+#jumbotron {
+  background: #000000;
+  background: linear-gradient(135deg, #000000, #2a623d); }
+
+body .github-fork-ribbon.left-top:before, body .github-fork-ribbon.left-top:after, body .github-fork-ribbon.left-bottom:before, body .github-fork-ribbon.left-bottom:after {
+  right: auto;
+  left: -3.25em; }
+
+body .github-fork-ribbon.left-top, body .github-fork-ribbon.left-bottom {
+  top: 50px;
+  z-index: 1; }
+
+body .github-fork-ribbon:before {
+  background-color: #2a623d; }
+
+body .github-fork-ribbon:before, body .github-fork-ribbon:after {
+  position: absolute;
+  display: block;
+  width: 15.25em;
+  height: 2.0em;
+  top: 3.25em; }
+
+body .github-fork-ribbon:before {
+  padding: 1.15em 0 1.15em 0; }
+
+.bs-docs-masthead {
+  padding-top: 50px;
+  padding-bottom: 40px;
+  margin-bottom: 20px; }
+
+.bs-docs-header h1, .bs-docs-header p {
+  margin-right: 0px; }
+
+.bs-docs-sidebar .nav > li > a {
+  font-size: 15px; }
+
+.bs-docs-sidebar .nav .nav > li > a {
+  font-size: 14px; }
+
+.back-top-top {
+  font-size: 13px; }
+
+#jumbotron {
+  position: relative; }
+
+#jumbotron:after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  height: 50px;
+  width: 30%;
+  background: linear-gradient(135deg, transparent 50px, white 50px); }
+
+.panel-heading {
+  overflow-x: scroll;
+  overflow-y: hidden; }
+
+.panel-title {
+  white-space: nowrap; }
+
+.tooltip-inner {
+  max-width: 500px; }
+
+.all-classes ul.pager {
+  text-align: left; }
+  .all-classes ul.pager li {
+    display: inline-block;
+    margin: 6px 6px 6px 0; }

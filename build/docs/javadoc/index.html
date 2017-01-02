@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="index, follow">
+
+<!-- start:inject SEO data -->
+
+<title>Clog4j</title>
+<script>window.title = 'Clog4j';</script>
+
+
+
+<title>The power of Log4j wrapped inside the simplicity of logging and String formatting of Clog</title>
+
+
+
+
+
+
+
+
+
+<!-- end:inject SEO data -->
+
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.ie.min.css" />
+<![endif]-->
+
+
+<link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.min.css" rel="stylesheet" />
+
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.3.0/bootbox.min.js"></script>
+
+
+<!-- start:inject styles -->
+
+
+    
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap_theme.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/assets/css/docs.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/assets/css/orchid.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/assets/css/inner/dir/innerdir.css" />
+    
+    <link rel="stylesheet" type="text/css" href="/assets/css/inner/dir/orchidinnerdir.css" />
+    
+
+<!-- end:inject styles -->
+</head>
+<body>
+
+<a class="github-fork-ribbon left-top" href="https://github.com/JavaEden/Clog4j" title="Fork me on GitHub">Fork me on GitHub</a>
+
+<header class="navbar navbar-fixed-top bs-docs-nav" id="top">
+    <div class="container">
+        <div class="navbar-header" role="banner">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Orchid</a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+
+            
+
+            <ul class="nav navbar-nav">
+                
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                
+                    
+                        
+
+
+
+
+
+
+
+
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">All Pages <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+        
+        
+            
+            <li><a href="/pages/download">Download</a></li>
+            
+            <li><a href="/pages/logging">Logging</a></li>
+            
+            <li><a href="/pages/overview">Overview</a></li>
+            
+            <li><a href="/pages/parseltongue">Parseltongue</a></li>
+            
+        
+    </ul>
+</li>
+
+
+
+                    
+                        
+
+
+
+
+
+
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">All Classes <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+        
+        
+        <li><a href="/classes/com/caseyjbrooks/clog4j/Clog4j">Clog4j</a></li>
+        
+        <li><a href="/classes/com/caseyjbrooks/clog4j/ClogDebug">ClogDebug</a></li>
+        
+        <li><a href="/classes/com/caseyjbrooks/clog4j/ClogError">ClogError</a></li>
+        
+        <li><a href="/classes/com/caseyjbrooks/clog4j/ClogFatal">ClogFatal</a></li>
+        
+        <li><a href="/classes/com/caseyjbrooks/clog4j/ClogInfo">ClogInfo</a></li>
+        
+        <li><a href="/classes/com/caseyjbrooks/clog4j/ClogTrace">ClogTrace</a></li>
+        
+        <li><a href="/classes/com/caseyjbrooks/clog4j/ClogWarn">ClogWarn</a></li>
+        
+    </ul>
+</li>
+
+
+
+
+
+                    
+                        
+
+
+
+
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">All Packages <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+        
+        <li><a href="/classes/com/caseyjbrooks/clog4j">com.caseyjbrooks.clog4j</a></li>
+        
+    </ul>
+</li>
+
+
+
+
+
+
+
+                    
+                
+            </ul>
+
+            
+        </nav>
+    </div>
+</header>
+
+
+
+
+<!-- Header
+=========================================== -->
+<div class="bs-docs-masthead" id="jumbotron">
+    <div class="container">
+        <h1 class="home-title">Clog4j</h1>
+        <p class="lead">The power of Log4j wrapped inside the simplicity of logging and String formatting of Clog</p>
+        <p class="lead">
+            <a href="https://github.com/JavaEden/Clog4j" class="btn btn-outline-inverse btn-lg">Download</a>
+        </p>
+        <p class="version">
+            Currently v1.3.0
+        </p>
+        <p class="version">
+            <img alt="Travis CI" src="https://travis-ci.org/JavaEden/Clog4j.svg?branch=master"/>
+            <img alt="Jitpack" src="https://jitpack.io/v/JavaEden/Clog4j.svg" />
+            <img alt="Code Coverage" src="https://img.shields.io/codecov/c/github/JavaEden/Clog4j/master.svg">
+        </p>
+    </div>
+</div>
+
+<div class="container bs-docs-container">
+    <div class="row">
+        <!-- Content
+        =========================================== -->
+        <div class="col-md-9" role="main">
+            
+                <section class="bs-docs-section">
+                    <h1 id="readme" class="page-header">Readme</h1>
+    
+                    <h1>Clog4j</h1>
+<p>Clog logger implementation for Log4j</p>
+<p>See https://github.com/JavaEden/Clog for information on Clog.</p>
+<h3>Clog4j Implementation</h3>
+<p>Clog4j provides simple Log4j implementations for Clog. The mapping between Clog levels and Log4j levels is as follows:</p>
+<p><code>Clog.d(...) --&gt; logger.debug(...)</code></p>
+<p><code>Clog.e(...) --&gt; logger.error(...)</code></p>
+<p><code>Clog.i(...) --&gt; logger.info(...)</code></p>
+<p><code>Clog.v(...) --&gt; logger.trace(...)</code></p>
+<p><code>Clog.w(...) --&gt; logger.warn(...)</code></p>
+<p><code>Clog.wtf(...) --&gt; logger.fatal(...)</code></p>
+<p>In addition, Clog tags map to Log4j Markers, like so:</p>
+<pre><code>d(String tag, String message) {
+  logger.debug(MarkerManager.getMarker(tag), message);
+}
+</code></pre>
+<p>Getting Clog4j integrated into your project is easy. Add the following to your project's initialization, such as your <code>main()</code> method:</p>
+<pre><code class="language-java">if(isDebug) { // &lt;-- isDebug is a flag indicating your build is in development, replace with your actual debug check
+    Clog.setCurrentProfile(&quot;dev&quot;, Clog4j.getDevelopmentClog());
+}
+else {
+    Clog.setCurrentProfile(&quot;prod&quot;, Clog4j.getProductionClog());
+}
+</code></pre>
+<p>In development, all logs will be directed to the Log4j implementations shown above, but in production, all logs will be discarded. You can replace the production log profile with implementations that write to file or send to your a database if you need that instead.</p>
+<h3>Download</h3>
+<p>Clog and Clog4j is distrubuted through JitPack.io.</p>
+<p><a href="https://jitpack.io/#JavaEden/Clog4j"><img src="https://jitpack.io/v/JavaEden/Clog4j.svg" alt="" /></a>
+<a href="https://jitpack.io/com/github/JavaEden/Clog/v1.2.4/javadoc/"><img src="https://img.shields.io/github/tag/JavaEden/Clog.svg?maxAge=2592000&amp;label=javadoc" alt="JitPack Javadoc" /></a>
+<a href=""><img src="https://img.shields.io/github/downloads/JavaEden/Clog4j/latest/total.svg?maxAge=2592000" alt="Github Releases" /></a></p>
+<p>In your project-level <code>build.gradle</code>:</p>
+<pre><code class="language-groovy">allprojects {
+    repositories {
+        ...
+        maven { url &quot;https://jitpack.io&quot; }
+    }
+}
+</code></pre>
+<p>In your module's <code>build.gradle</code> (replace the version with the most recent release shown on badge above):</p>
+<pre><code class="language-groovy">dependencies {
+    ...
+    compile('com.github.JavaEden:Clog4j:v1.3.0') {
+        transitive = true;
+    }
+}
+</code></pre>
+<p>You will need to add a Log4j configuration file to your project for any logging of priotity lower than <code>error</code> to show. Add a file called <code>log4j2.xml</code> to <code>src/main/resources/</code> as your configuration file. A basic example configuration is shown below:</p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;Configuration&gt;
+    &lt;Appenders&gt;
+        &lt;Console name=&quot;STDOUT&quot; target=&quot;SYSTEM_OUT&quot;&gt;
+            &lt;PatternLayout pattern=&quot;%d %-5p [%t] %C{2} (%F:%L) - %m%n&quot;/&gt;
+        &lt;/Console&gt;
+    &lt;/Appenders&gt;
+    &lt;Loggers&gt;
+        &lt;Logger name=&quot;org.apache.log4j.xml&quot; level=&quot;info&quot;/&gt;
+        &lt;Root level=&quot;trace&quot;&gt;
+            &lt;AppenderRef ref=&quot;STDOUT&quot;/&gt;
+        &lt;/Root&gt;
+    &lt;/Loggers&gt;
+&lt;/Configuration&gt;
+</code></pre>
+
+                </section>
+            
+
+            <section class="bs-docs-section">
+                <h1 id="classes" class="page-header">Classes</h1>
+
+                <div class="all-classes">
+                    <ul class="pager">
+                        
+                        
+                        <li><a href="/classes/com/caseyjbrooks/clog4j/Clog4j">Clog4j</a></li>
+                        
+                        <li><a href="/classes/com/caseyjbrooks/clog4j/ClogDebug">ClogDebug</a></li>
+                        
+                        <li><a href="/classes/com/caseyjbrooks/clog4j/ClogError">ClogError</a></li>
+                        
+                        <li><a href="/classes/com/caseyjbrooks/clog4j/ClogFatal">ClogFatal</a></li>
+                        
+                        <li><a href="/classes/com/caseyjbrooks/clog4j/ClogInfo">ClogInfo</a></li>
+                        
+                        <li><a href="/classes/com/caseyjbrooks/clog4j/ClogTrace">ClogTrace</a></li>
+                        
+                        <li><a href="/classes/com/caseyjbrooks/clog4j/ClogWarn">ClogWarn</a></li>
+                        
+                    </ul>
+                </div>
+            </section>
+
+            
+            <section class="bs-docs-section">
+                <h1 id="license" class="page-header">License</h1>
+
+                <pre>
+                    MIT License
+
+Copyright (c) 2016 JavaEden
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+                </pre>
+            </section>
+            
+        </div>
+
+        <!-- Page navigation
+        =========================================== -->
+        <div class="col-md-3" role="complementary">
+            <div class="bs-docs-sidebar hidden-print">
+                <ul class="nav bs-docs-sidenav">
+                </ul>
+                <a class="back-to-top" href="#top">
+                    <i class="glyphicon glyphicon-chevron-up"></i> Back to top
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer class="bs-docs-footer" role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <nav aria-label="navigateClasses">
+                    <ul class="pager">
+                        
+
+                        
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <br>
+
+        <p>
+            Licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>,
+            documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
+        </p>
+        <p>
+            Documentation template based on the <a href="https://github.com/mistic100/jekyll-bootstrap-doc">Jekyll Bootstrap Doc</a> Jekyll theme by the <a href="http://getbootstrap.com">Bootstrap team</a>
+        </p>
+
+        <ul class="bs-docs-footer-links muted">
+            <li>Currently v1.3.0</li>
+        </ul>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.1.2/trianglify.min.js"></script>
+
+<!-- inject scripts -->
+
+
+    
+    <script src="/assets/js/docs.js"></script>
+    
+
+<script>window.root = {
+  "root": {
+    "options": {
+      "d": "/Users/cbrooks/Documents/personal/java/eden/Clog4j/build/docs/javadoc",
+      "data": {
+        "additionalClasses": {"links": ["https://javaeden.github.io/Clog/meta/classIndex.json"]},
+        "nav": {"right": [
+          {"type": "pages"},
+          {"type": "classes"},
+          {"type": "packages"}
+        ]}
+      },
+      "v": "v1.3.0",
+      "theme": "com.eden.orchidliquid.BSDocTheme",
+      "resourcesDir": "/Users/cbrooks/Documents/personal/java/eden/Clog4j/src/orchidDocs/resources",
+      "config": {
+        "github": {
+          "repo": "Clog4j",
+          "branch": "master",
+          "username": "JavaEden"
+        },
+        "about": {
+          "name": "Clog4j",
+          "description": "The power of Log4j wrapped inside the simplicity of logging and String formatting of Clog"
+        },
+        "colors": [
+          "#2a623d",
+          "#000000"
+        ]
+      }
+    },
+    "generators": {},
+    "index": {
+      "assets": {
+        "css": {
+          "files": [
+            {"url": "/assets/css/bootstrap_theme.css"},
+            {"url": "/assets/css/docs.css"},
+            {"url": "/assets/css/orchid.css"}
+          ],
+          "inner": {"dir": {"files": [
+            {"url": "/assets/css/inner/dir/innerdir.css"},
+            {"url": "/assets/css/inner/dir/orchidinnerdir.css"}
+          ]}}
+        },
+        "js": {"files": [{"url": "/assets/js/docs.js"}]}
+      },
+      "pages": {"files": [
+        {
+          "relative_url": "pages/download",
+          "name": "Download",
+          "url": "/pages/download"
+        },
+        {
+          "relative_url": "pages/logging",
+          "name": "Logging",
+          "url": "/pages/logging"
+        },
+        {
+          "relative_url": "pages/overview",
+          "name": "Overview",
+          "url": "/pages/overview"
+        },
+        {
+          "relative_url": "pages/parseltongue",
+          "name": "Parseltongue",
+          "url": "/pages/parseltongue"
+        }
+      ]},
+      "meta": {"classIndex": {
+        "simpleName": "classIndex",
+        "name": "classIndex",
+        "url": "//meta/classIndex.json"
+      }},
+      "classes": {
+        "internal": [
+          {
+            "simpleName": "Clog4j",
+            "superclass": {
+              "simpleName": "Object",
+              "name": "java.lang.Object"
+            },
+            "name": "com.caseyjbrooks.clog4j.Clog4j",
+            "url": "/classes/com/caseyjbrooks/clog4j/Clog4j"
+          },
+          {
+            "interfaces": [{
+              "simpleName": "ClogLogger",
+              "name": "com.caseyjbrooks.clog.ClogLogger"
+            }],
+            "simpleName": "ClogDebug",
+            "superclass": {
+              "simpleName": "Object",
+              "name": "java.lang.Object"
+            },
+            "name": "com.caseyjbrooks.clog4j.ClogDebug",
+            "url": "/classes/com/caseyjbrooks/clog4j/ClogDebug"
+          },
+          {
+            "interfaces": [{
+              "simpleName": "ClogLogger",
+              "name": "com.caseyjbrooks.clog.ClogLogger"
+            }],
+            "simpleName": "ClogError",
+            "superclass": {
+              "simpleName": "Object",
+              "name": "java.lang.Object"
+            },
+            "name": "com.caseyjbrooks.clog4j.ClogError",
+            "url": "/classes/com/caseyjbrooks/clog4j/ClogError"
+          },
+          {
+            "interfaces": [{
+              "simpleName": "ClogLogger",
+              "name": "com.caseyjbrooks.clog.ClogLogger"
+            }],
+            "simpleName": "ClogFatal",
+            "superclass": {
+              "simpleName": "Object",
+              "name": "java.lang.Object"
+            },
+            "name": "com.caseyjbrooks.clog4j.ClogFatal",
+            "url": "/classes/com/caseyjbrooks/clog4j/ClogFatal"
+          },
+          {
+            "interfaces": [{
+              "simpleName": "ClogLogger",
+              "name": "com.caseyjbrooks.clog.ClogLogger"
+            }],
+            "simpleName": "ClogInfo",
+            "superclass": {
+              "simpleName": "Object",
+              "name": "java.lang.Object"
+            },
+            "name": "com.caseyjbrooks.clog4j.ClogInfo",
+            "url": "/classes/com/caseyjbrooks/clog4j/ClogInfo"
+          },
+          {
+            "interfaces": [{
+              "simpleName": "ClogLogger",
+              "name": "com.caseyjbrooks.clog.ClogLogger"
+            }],
+            "simpleName": "ClogTrace",
+            "superclass": {
+              "simpleName": "Object",
+              "name": "java.lang.Object"
+            },
+            "name": "com.caseyjbrooks.clog4j.ClogTrace",
+            "url": "/classes/com/caseyjbrooks/clog4j/ClogTrace"
+          },
+          {
+            "interfaces": [{
+              "simpleName": "ClogLogger",
+              "name": "com.caseyjbrooks.clog.ClogLogger"
+            }],
+            "simpleName": "ClogWarn",
+            "superclass": {
+              "simpleName": "Object",
+              "name": "java.lang.Object"
+            },
+            "name": "com.caseyjbrooks.clog4j.ClogWarn",
+            "url": "/classes/com/caseyjbrooks/clog4j/ClogWarn"
+          }
+        ],
+        "external": [
+          {
+            "simpleName": "Clog",
+            "superclass": {
+              "simpleName": "Object",
+              "name": "java.lang.Object"
+            },
+            "name": "com.caseyjbrooks.clog.Clog",
+            "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/Clog"
+          },
+          {
+            "simpleName": "ClogFormatter",
+            "name": "com.caseyjbrooks.clog.ClogFormatter",
+            "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/ClogFormatter"
+          },
+          {
+            "simpleName": "ClogLogger",
+            "name": "com.caseyjbrooks.clog.ClogLogger",
+            "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/ClogLogger"
+          },
+          {
+            "interfaces": [{
+              "simpleName": "ClogLogger",
+              "name": "com.caseyjbrooks.clog.ClogLogger"
+            }],
+            "simpleName": "DefaultLogger",
+            "superclass": {
+              "simpleName": "Object",
+              "name": "java.lang.Object"
+            },
+            "name": "com.caseyjbrooks.clog.DefaultLogger",
+            "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/DefaultLogger"
+          },
+          {
+            "interfaces": [{
+              "simpleName": "ClogLogger",
+              "name": "com.caseyjbrooks.clog.ClogLogger"
+            }],
+            "simpleName": "EmptyLogger",
+            "superclass": {
+              "simpleName": "Object",
+              "name": "java.lang.Object"
+            },
+            "name": "com.caseyjbrooks.clog.EmptyLogger",
+            "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/EmptyLogger"
+          },
+          {
+            "interfaces": [{
+              "simpleName": "ClogFormatter",
+              "name": "com.caseyjbrooks.clog.ClogFormatter"
+            }],
+            "simpleName": "Parseltongue",
+            "superclass": {
+              "simpleName": "Object",
+              "name": "java.lang.Object"
+            },
+            "name": "com.caseyjbrooks.clog.parseltongue.Parseltongue",
+            "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/parseltongue/Parseltongue"
+          },
+          {
+            "interfaces": [{
+              "simpleName": "Annotation",
+              "name": "java.lang.annotation.Annotation"
+            }],
+            "simpleName": "Spell",
+            "name": "com.caseyjbrooks.clog.parseltongue.Spell",
+            "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/parseltongue/Spell"
+          },
+          {
+            "simpleName": "TheStandardBookOfSpells",
+            "superclass": {
+              "simpleName": "Object",
+              "name": "java.lang.Object"
+            },
+            "name": "com.caseyjbrooks.clog.parseltongue.TheStandardBookOfSpells",
+            "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/parseltongue/TheStandardBookOfSpells"
+          }
+        ]
+      },
+      "packages": [{
+        "name": "com.caseyjbrooks.clog4j",
+        "url": "/classes/com/caseyjbrooks/clog4j"
+      }]
+    }
+  },
+  "options": {
+    "d": "/Users/cbrooks/Documents/personal/java/eden/Clog4j/build/docs/javadoc",
+    "data": {
+      "additionalClasses": {"links": ["https://javaeden.github.io/Clog/meta/classIndex.json"]},
+      "nav": {"right": [
+        {"type": "pages"},
+        {"type": "classes"},
+        {"type": "packages"}
+      ]}
+    },
+    "v": "v1.3.0",
+    "theme": "com.eden.orchidliquid.BSDocTheme",
+    "resourcesDir": "/Users/cbrooks/Documents/personal/java/eden/Clog4j/src/orchidDocs/resources",
+    "config": {
+      "github": {
+        "repo": "Clog4j",
+        "branch": "master",
+        "username": "JavaEden"
+      },
+      "about": {
+        "name": "Clog4j",
+        "description": "The power of Log4j wrapped inside the simplicity of logging and String formatting of Clog"
+      },
+      "colors": [
+        "#2a623d",
+        "#000000"
+      ]
+    }
+  },
+  "generators": {},
+  "index": {
+    "assets": {
+      "css": {
+        "files": [
+          {"url": "/assets/css/bootstrap_theme.css"},
+          {"url": "/assets/css/docs.css"},
+          {"url": "/assets/css/orchid.css"}
+        ],
+        "inner": {"dir": {"files": [
+          {"url": "/assets/css/inner/dir/innerdir.css"},
+          {"url": "/assets/css/inner/dir/orchidinnerdir.css"}
+        ]}}
+      },
+      "js": {"files": [{"url": "/assets/js/docs.js"}]}
+    },
+    "pages": {"files": [
+      {
+        "relative_url": "pages/download",
+        "name": "Download",
+        "url": "/pages/download"
+      },
+      {
+        "relative_url": "pages/logging",
+        "name": "Logging",
+        "url": "/pages/logging"
+      },
+      {
+        "relative_url": "pages/overview",
+        "name": "Overview",
+        "url": "/pages/overview"
+      },
+      {
+        "relative_url": "pages/parseltongue",
+        "name": "Parseltongue",
+        "url": "/pages/parseltongue"
+      }
+    ]},
+    "meta": {"classIndex": {
+      "simpleName": "classIndex",
+      "name": "classIndex",
+      "url": "//meta/classIndex.json"
+    }},
+    "classes": {
+      "internal": [
+        {
+          "simpleName": "Clog4j",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog4j.Clog4j",
+          "url": "/classes/com/caseyjbrooks/clog4j/Clog4j"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "ClogLogger",
+            "name": "com.caseyjbrooks.clog.ClogLogger"
+          }],
+          "simpleName": "ClogDebug",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog4j.ClogDebug",
+          "url": "/classes/com/caseyjbrooks/clog4j/ClogDebug"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "ClogLogger",
+            "name": "com.caseyjbrooks.clog.ClogLogger"
+          }],
+          "simpleName": "ClogError",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog4j.ClogError",
+          "url": "/classes/com/caseyjbrooks/clog4j/ClogError"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "ClogLogger",
+            "name": "com.caseyjbrooks.clog.ClogLogger"
+          }],
+          "simpleName": "ClogFatal",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog4j.ClogFatal",
+          "url": "/classes/com/caseyjbrooks/clog4j/ClogFatal"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "ClogLogger",
+            "name": "com.caseyjbrooks.clog.ClogLogger"
+          }],
+          "simpleName": "ClogInfo",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog4j.ClogInfo",
+          "url": "/classes/com/caseyjbrooks/clog4j/ClogInfo"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "ClogLogger",
+            "name": "com.caseyjbrooks.clog.ClogLogger"
+          }],
+          "simpleName": "ClogTrace",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog4j.ClogTrace",
+          "url": "/classes/com/caseyjbrooks/clog4j/ClogTrace"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "ClogLogger",
+            "name": "com.caseyjbrooks.clog.ClogLogger"
+          }],
+          "simpleName": "ClogWarn",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog4j.ClogWarn",
+          "url": "/classes/com/caseyjbrooks/clog4j/ClogWarn"
+        }
+      ],
+      "external": [
+        {
+          "simpleName": "Clog",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog.Clog",
+          "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/Clog"
+        },
+        {
+          "simpleName": "ClogFormatter",
+          "name": "com.caseyjbrooks.clog.ClogFormatter",
+          "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/ClogFormatter"
+        },
+        {
+          "simpleName": "ClogLogger",
+          "name": "com.caseyjbrooks.clog.ClogLogger",
+          "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/ClogLogger"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "ClogLogger",
+            "name": "com.caseyjbrooks.clog.ClogLogger"
+          }],
+          "simpleName": "DefaultLogger",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog.DefaultLogger",
+          "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/DefaultLogger"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "ClogLogger",
+            "name": "com.caseyjbrooks.clog.ClogLogger"
+          }],
+          "simpleName": "EmptyLogger",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog.EmptyLogger",
+          "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/EmptyLogger"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "ClogFormatter",
+            "name": "com.caseyjbrooks.clog.ClogFormatter"
+          }],
+          "simpleName": "Parseltongue",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog.parseltongue.Parseltongue",
+          "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/parseltongue/Parseltongue"
+        },
+        {
+          "interfaces": [{
+            "simpleName": "Annotation",
+            "name": "java.lang.annotation.Annotation"
+          }],
+          "simpleName": "Spell",
+          "name": "com.caseyjbrooks.clog.parseltongue.Spell",
+          "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/parseltongue/Spell"
+        },
+        {
+          "simpleName": "TheStandardBookOfSpells",
+          "superclass": {
+            "simpleName": "Object",
+            "name": "java.lang.Object"
+          },
+          "name": "com.caseyjbrooks.clog.parseltongue.TheStandardBookOfSpells",
+          "url": "https://javaeden.github.io/Clog/classes/com/caseyjbrooks/clog/parseltongue/TheStandardBookOfSpells"
+        }
+      ]
+    },
+    "packages": [{
+      "name": "com.caseyjbrooks.clog4j",
+      "url": "/classes/com/caseyjbrooks/clog4j"
+    }]
+  }
+};</script>
+<!-- end:inject scripts -->
+
+<script>
+    $(function() {
+        window.colors = [
+  "#2a623d",
+  "#000000"
+];
+        trianglify();
+        buildNav();
+    });
+</script>
+</body>
+</html>
