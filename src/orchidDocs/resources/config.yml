@@ -1,0 +1,13 @@
+
+about:
+  name: Clog4j
+  description: The power of Log4j wrapped inside the simplicity of logging and String formatting of Clog
+
+colors:
+  - '#2a623d'
+  - '#000000'
+
+github:
+  username: 'JavaEden'
+  repo: 'Clog4j'
+  branch: 'master'

@@ -62,7 +62,7 @@ In your module's `build.gradle` (replace the version with the most recent releas
 ```groovy
 dependencies {
     ...
-    compile('com.github.JavaEden:Clog4j:v1.2.4') {
+    compile('com.github.JavaEden:Clog4j:{{options.v}}') {
         transitive = true;
     }
 }
