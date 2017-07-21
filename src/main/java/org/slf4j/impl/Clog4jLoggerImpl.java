@@ -42,111 +42,61 @@ public class Clog4jLoggerImpl implements Logger {
     public boolean isErrorEnabled() { return true; }
     @Override
     public boolean isErrorEnabled(Marker marker) { return true; }
-    
+
     // Logger implementations
-    @Override
-    public void trace(String msg) { Clog.v(name, msg); }
-    @Override
-    public void trace(String format, Object arg) { Clog.v(name, format, arg); }
-    @Override
-    public void trace(String format, Object arg1, Object arg2) { Clog.v(name, format, arg1, arg2); }
-    @Override
-    public void trace(String format, Object... arguments) { Clog.v(name, format, arguments); }
-    @Override
-    public void trace(String msg, Throwable t) { Clog.v(name, msg, t); }
-    @Override
-    public void trace(Marker marker, String msg) { Clog.v(marker.getName(), msg); }
-    @Override
-    public void trace(Marker marker, String format, Object arg) { Clog.v(marker.getName(), format, arg); }
-    @Override
-    public void trace(Marker marker, String format, Object arg1, Object arg2) { Clog.v(marker.getName(), format, arg1, arg2); }
-    @Override
-    public void trace(Marker marker, String format, Object... argArray) { Clog.v(marker.getName(), format, argArray); }
-    @Override
-    public void trace(Marker marker, String msg, Throwable t) { Clog.v(marker.getName(), msg, t); }
+    @Override public void trace(String msg)                                             { Clog.pushTag(name);             Clog.v(msg);                Clog.popTag(); }
+    @Override public void trace(String format, Object arg)                              { Clog.pushTag(name);             Clog.v(format, arg);        Clog.popTag(); }
+    @Override public void trace(String format, Object arg1, Object arg2)                { Clog.pushTag(name);             Clog.v(format, arg1, arg2); Clog.popTag(); }
+    @Override public void trace(String format, Object... arguments)                     { Clog.pushTag(name);             Clog.v(format, arguments);  Clog.popTag(); }
+    @Override public void trace(String msg, Throwable t)                                { Clog.pushTag(name);             Clog.v(msg, t);             Clog.popTag(); }
+    @Override public void trace(Marker marker, String msg)                              { Clog.pushTag(marker.getName()); Clog.v(msg);                Clog.popTag(); }
+    @Override public void trace(Marker marker, String format, Object arg)               { Clog.pushTag(marker.getName()); Clog.v(format, arg);        Clog.popTag(); }
+    @Override public void trace(Marker marker, String format, Object arg1, Object arg2) { Clog.pushTag(marker.getName()); Clog.v(format, arg1, arg2); Clog.popTag(); }
+    @Override public void trace(Marker marker, String format, Object... argArray)       { Clog.pushTag(marker.getName()); Clog.v(format, argArray);   Clog.popTag(); }
+    @Override public void trace(Marker marker, String msg, Throwable t)                 { Clog.pushTag(marker.getName()); Clog.v(msg, t);             Clog.popTag(); }
 
-    @Override
-    public void debug(String msg) { Clog.d(name, msg); }
-    @Override
-    public void debug(String format, Object arg) { Clog.d(name, format, arg); }
-    @Override
-    public void debug(String format, Object arg1, Object arg2) { Clog.d(name, format, arg1, arg2); }
-    @Override
-    public void debug(String format, Object... arguments) { Clog.d(name, format, arguments); }
-    @Override
-    public void debug(String msg, Throwable t) { Clog.d(name, msg, t); }
-    @Override
-    public void debug(Marker marker, String msg) { Clog.d(marker.getName(), msg); }
-    @Override
-    public void debug(Marker marker, String format, Object arg) { Clog.d(marker.getName(), format, arg); }
-    @Override
-    public void debug(Marker marker, String format, Object arg1, Object arg2) { Clog.d(marker.getName(), format, arg1, arg2); }
-    @Override
-    public void debug(Marker marker, String format, Object... argArray) { Clog.d(marker.getName(), format, argArray); }
-    @Override
-    public void debug(Marker marker, String msg, Throwable t) { Clog.d(marker.getName(), msg, t); }
+    @Override public void debug(String msg)                                             { Clog.pushTag(name);             Clog.d(msg);                Clog.popTag(); }
+    @Override public void debug(String format, Object arg)                              { Clog.pushTag(name);             Clog.d(format, arg);        Clog.popTag(); }
+    @Override public void debug(String format, Object arg1, Object arg2)                { Clog.pushTag(name);             Clog.d(format, arg1, arg2); Clog.popTag(); }
+    @Override public void debug(String format, Object... arguments)                     { Clog.pushTag(name);             Clog.d(format, arguments);  Clog.popTag(); }
+    @Override public void debug(String msg, Throwable t)                                { Clog.pushTag(name);             Clog.d(msg, t);             Clog.popTag(); }
+    @Override public void debug(Marker marker, String msg)                              { Clog.pushTag(marker.getName()); Clog.d(msg);                Clog.popTag(); }
+    @Override public void debug(Marker marker, String format, Object arg)               { Clog.pushTag(marker.getName()); Clog.d(format, arg);        Clog.popTag(); }
+    @Override public void debug(Marker marker, String format, Object arg1, Object arg2) { Clog.pushTag(marker.getName()); Clog.d(format, arg1, arg2); Clog.popTag(); }
+    @Override public void debug(Marker marker, String format, Object... argArray)       { Clog.pushTag(marker.getName()); Clog.d(format, argArray);   Clog.popTag(); }
+    @Override public void debug(Marker marker, String msg, Throwable t)                 { Clog.pushTag(marker.getName()); Clog.d(msg, t);             Clog.popTag(); }
 
-    @Override
-    public void info(String msg) { Clog.i(name, msg); }
-    @Override
-    public void info(String format, Object arg) { Clog.i(name, format, arg); }
-    @Override
-    public void info(String format, Object arg1, Object arg2) { Clog.i(name, format, arg1, arg2); }
-    @Override
-    public void info(String format, Object... arguments) { Clog.i(name, format, arguments); }
-    @Override
-    public void info(String msg, Throwable t) { Clog.i(name, msg, t); }
-    @Override
-    public void info(Marker marker, String msg) { Clog.i(marker.getName(), msg); }
-    @Override
-    public void info(Marker marker, String format, Object arg) { Clog.i(marker.getName(), format, arg); }
-    @Override
-    public void info(Marker marker, String format, Object arg1, Object arg2) { Clog.i(marker.getName(), format, arg1, arg2); }
-    @Override
-    public void info(Marker marker, String format, Object... argArray) { Clog.i(marker.getName(), format, argArray); }
-    @Override
-    public void info(Marker marker, String msg, Throwable t) { Clog.i(marker.getName(), msg, t); }
+    @Override public void info(String msg)                                              { Clog.pushTag(name);             Clog.i(msg);                Clog.popTag(); }
+    @Override public void info(String format, Object arg)                               { Clog.pushTag(name);             Clog.i(format, arg);        Clog.popTag(); }
+    @Override public void info(String format, Object arg1, Object arg2)                 { Clog.pushTag(name);             Clog.i(format, arg1, arg2); Clog.popTag(); }
+    @Override public void info(String format, Object... arguments)                      { Clog.pushTag(name);             Clog.i(format, arguments);  Clog.popTag(); }
+    @Override public void info(String msg, Throwable t)                                 { Clog.pushTag(name);             Clog.i(msg, t);             Clog.popTag(); }
+    @Override public void info(Marker marker, String msg)                               { Clog.pushTag(marker.getName()); Clog.i(msg);                Clog.popTag(); }
+    @Override public void info(Marker marker, String format, Object arg)                { Clog.pushTag(marker.getName()); Clog.i(format, arg);        Clog.popTag(); }
+    @Override public void info(Marker marker, String format, Object arg1, Object arg2)  { Clog.pushTag(marker.getName()); Clog.i(format, arg1, arg2); Clog.popTag(); }
+    @Override public void info(Marker marker, String format, Object... argArray)        { Clog.pushTag(marker.getName()); Clog.i(format, argArray);   Clog.popTag(); }
+    @Override public void info(Marker marker, String msg, Throwable t)                  { Clog.pushTag(marker.getName()); Clog.i(msg, t);             Clog.popTag(); }
 
-    @Override
-    public void warn(String msg) { Clog.w(name, msg); }
-    @Override
-    public void warn(String format, Object arg) { Clog.w(name, format, arg); }
-    @Override
-    public void warn(String format, Object arg1, Object arg2) { Clog.w(name, format, arg1, arg2); }
-    @Override
-    public void warn(String format, Object... arguments) { Clog.w(name, format, arguments); }
-    @Override
-    public void warn(String msg, Throwable t) { Clog.w(name, msg, t); }
-    @Override
-    public void warn(Marker marker, String msg) { Clog.w(marker.getName(), msg); }
-    @Override
-    public void warn(Marker marker, String format, Object arg) { Clog.w(marker.getName(), format, arg); }
-    @Override
-    public void warn(Marker marker, String format, Object arg1, Object arg2) { Clog.w(marker.getName(), format, arg1, arg2); }
-    @Override
-    public void warn(Marker marker, String format, Object... argArray) { Clog.w(marker.getName(), format, argArray); }
-    @Override
-    public void warn(Marker marker, String msg, Throwable t) { Clog.w(marker.getName(), msg, t); }
+    @Override public void warn(String msg)                                              { Clog.pushTag(name);             Clog.w(msg);                Clog.popTag(); }
+    @Override public void warn(String format, Object arg)                               { Clog.pushTag(name);             Clog.w(format, arg);        Clog.popTag(); }
+    @Override public void warn(String format, Object arg1, Object arg2)                 { Clog.pushTag(name);             Clog.w(format, arg1, arg2); Clog.popTag(); }
+    @Override public void warn(String format, Object... arguments)                      { Clog.pushTag(name);             Clog.w(format, arguments);  Clog.popTag(); }
+    @Override public void warn(String msg, Throwable t)                                 { Clog.pushTag(name);             Clog.w(msg, t);             Clog.popTag(); }
+    @Override public void warn(Marker marker, String msg)                               { Clog.pushTag(marker.getName()); Clog.w(msg);                Clog.popTag(); }
+    @Override public void warn(Marker marker, String format, Object arg)                { Clog.pushTag(marker.getName()); Clog.w(format, arg);        Clog.popTag(); }
+    @Override public void warn(Marker marker, String format, Object arg1, Object arg2)  { Clog.pushTag(marker.getName()); Clog.w(format, arg1, arg2); Clog.popTag(); }
+    @Override public void warn(Marker marker, String format, Object... argArray)        { Clog.pushTag(marker.getName()); Clog.w(format, argArray);   Clog.popTag(); }
+    @Override public void warn(Marker marker, String msg, Throwable t)                  { Clog.pushTag(marker.getName()); Clog.w(msg, t);             Clog.popTag(); }
 
-    @Override
-    public void error(String msg) { Clog.e(name, msg); }
-    @Override
-    public void error(String format, Object arg) { Clog.e(name, format, arg); }
-    @Override
-    public void error(String format, Object arg1, Object arg2) { Clog.e(name, format, arg1, arg2); }
-    @Override
-    public void error(String format, Object... arguments) { Clog.e(name, format, arguments); }
-    @Override
-    public void error(String msg, Throwable t) { Clog.e(name, msg, t); }
-    @Override
-    public void error(Marker marker, String msg) { Clog.e(marker.getName(), msg); }
-    @Override
-    public void error(Marker marker, String format, Object arg) { Clog.e(marker.getName(), format, arg); }
-    @Override
-    public void error(Marker marker, String format, Object arg1, Object arg2) { Clog.e(marker.getName(), format, arg1, arg2); }
-    @Override
-    public void error(Marker marker, String format, Object... argArray) { Clog.e(marker.getName(), format, argArray); }
-    @Override
-    public void error(Marker marker, String msg, Throwable t) { Clog.e(marker.getName(), msg, t); }
+    @Override public void error(String msg)                                             { Clog.pushTag(name);             Clog.e(msg);                Clog.popTag(); }
+    @Override public void error(String format, Object arg)                              { Clog.pushTag(name);             Clog.e(format, arg);        Clog.popTag(); }
+    @Override public void error(String format, Object arg1, Object arg2)                { Clog.pushTag(name);             Clog.e(format, arg1, arg2); Clog.popTag(); }
+    @Override public void error(String format, Object... arguments)                     { Clog.pushTag(name);             Clog.e(format, arguments);  Clog.popTag(); }
+    @Override public void error(String msg, Throwable t)                                { Clog.pushTag(name);             Clog.e(msg, t);             Clog.popTag(); }
+    @Override public void error(Marker marker, String msg)                              { Clog.pushTag(marker.getName()); Clog.e(msg);                Clog.popTag(); }
+    @Override public void error(Marker marker, String format, Object arg)               { Clog.pushTag(marker.getName()); Clog.e(format, arg);        Clog.popTag(); }
+    @Override public void error(Marker marker, String format, Object arg1, Object arg2) { Clog.pushTag(marker.getName()); Clog.e(format, arg1, arg2); Clog.popTag(); }
+    @Override public void error(Marker marker, String format, Object... argArray)       { Clog.pushTag(marker.getName()); Clog.e(format, argArray);   Clog.popTag(); }
+    @Override public void error(Marker marker, String msg, Throwable t)                 { Clog.pushTag(marker.getName()); Clog.e(msg, t);             Clog.popTag(); }
 
 }
