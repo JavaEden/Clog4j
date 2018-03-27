@@ -1,3 +1,7 @@
+> # DEPRECATION NOTICE
+> As of Clog 2.0.0, this library has been moved into the main Clog repository at https://github.com/JavaEden/Clog. The 
+> new Gradle import is `com.eden:Clog4j:{version}`.
+
 # Clog4j
 Clog logger implementation for Log4j
 
